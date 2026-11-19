@@ -1,27 +1,26 @@
-name: Pubblica su Instagram
+name: Riempi coda Buffer
 on:
   schedule:
-    - cron: "*/10 * * * *"   # controlla la coda ogni 10 minuti
+    - cron: "*/30 * * * *"   # ogni 30 minuti ricarica la coda di Buffer
   workflow_dispatch: {}
 permissions:
   contents: write
 concurrency:
-  group: ig-publish
+  group: buffer-sync
   cancel-in-progress: false
 jobs:
-  publish:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Pubblica i post in scadenza
+      - name: Carica in Buffer i prossimi post
         env:
-          IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: python3 scripts/ig_publish.py
-      - name: Salva lo stato (queue -> published)
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 scripts/buffer_sync.py
+      - name: Salva lo stato (queue -> scheduled -> published)
         if: always()
         run: |
           git config user.name "imt-bot"
           git config user.email "imt-bot@users.noreply.github.com"
-          git add -A queue published
-          git diff --cached --quiet || (git commit -m "Pubblicato post da coda" && git push)
+          git add -A queue scheduled published buffer_channels.json 2>/dev/null || git add -A queue scheduled published
+          git diff --cached --quiet || (git commit -m "Aggiornata coda Buffer" && git push)
