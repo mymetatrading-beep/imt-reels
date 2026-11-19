@@ -2,6 +2,9 @@ name: Riempi coda Buffer
 on:
   schedule:
     - cron: "*/30 * * * *"   # ogni 30 minuti ricarica la coda di Buffer
+  push:
+    branches: [main]
+    paths: ["queue/**"]       # parte subito quando arrivano nuovi post in coda
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -23,4 +26,4 @@ jobs:
           git config user.name "imt-bot"
           git config user.email "imt-bot@users.noreply.github.com"
           git add -A queue scheduled published buffer_channels.json 2>/dev/null || git add -A queue scheduled published
-          git diff --cached --quiet || (git commit -m "Aggiornata coda Buffer" && git push)
+          git diff --cached --quiet || (git commit -m "Aggiornata coda Buffer" && git pull --rebase && git push)

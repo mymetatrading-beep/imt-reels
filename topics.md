@@ -8,3 +8,5 @@
 - 2026-11-20 08:00 — "Green candle. Buyers winning? Check the DELTA." (reels/2026-11-20-0800-delta-absorption.mp4) [programmato]
 - 2026-11-20 15:30 — "One loss is a trade. Three in a row is REVENGE." (reels/2026-11-20-1530-revenge-trading.mp4) [programmato]
 - 2026-11-20 21:00 — "Stop chasing. Let price come BACK." (reels/2026-11-20-2100-order-block.mp4) [programmato]
+- 2026-11-20 10:00 STORIA quiz: new high + delta -1,800 (risposta 18:00)
+- 2026-11-20 12:30 CAROSELLO: 4 footprint signals institutions can't hide (stacked imbalances, absorption, exhaustion, unfinished auction)

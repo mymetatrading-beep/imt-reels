@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "New high on the chart. Delta at the high: -1,800. What's really happening?",
+   "options": [
+    "Strong buyers pushing higher",
+    "Passive sellers absorbing the buyers",
+    "Nothing. Delta doesn't matter"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

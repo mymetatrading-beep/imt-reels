@@ -1,0 +1,13 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "answer",
+   "kicker": "QUIZ ANSWER",
+   "correct": "B",
+   "answer": "Passive sellers are absorbing the buyers.",
+   "explain": "Market buys lift price, but limit sellers fill every order. If price can't continue, trapped longs fuel the drop.",
+   "footer": "Full breakdown in today's Reel. Follow for daily order flow."
+  }
+ ]
+}

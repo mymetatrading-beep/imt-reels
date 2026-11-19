@@ -1,0 +1,171 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · FOOTPRINT",
+   "title": [
+    "4 footprint",
+    "signals",
+    "institutions",
+    "CAN'T HIDE"
+   ],
+   "pink": [
+    3
+   ],
+   "sub": "Read the auction, not the candle."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "Stacked buy imbalances",
+   "body": "Ask volume at least 3x the bid one tick below, on 3+ consecutive prices. That's aggressive initiative buying, not retail noise.",
+   "footprint": {
+    "rows": [
+     [
+      24510,
+      12,
+      45
+     ],
+     [
+      24509,
+      9,
+      188
+     ],
+     [
+      24508,
+      31,
+      212
+     ],
+     [
+      24507,
+      40,
+      176
+     ],
+     [
+      24506,
+      52,
+      61
+     ],
+     [
+      24505,
+      70,
+      48
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "label": "3 stacked imbalances = defend this zone"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "Absorption at the low",
+   "body": "Huge selling hits the bid, but price refuses to go lower. Someone big is buying every contract with limit orders.",
+   "footprint": {
+    "rows": [
+     [
+      24480,
+      120,
+      140
+     ],
+     [
+      24479,
+      160,
+      150
+     ],
+     [
+      24478,
+      210,
+      95
+     ],
+     [
+      24477,
+      640,
+      60
+     ]
+    ],
+    "sell_imb": [
+     3
+    ],
+    "poc": 3,
+    "label": "640 sold, price held = absorbed"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "Exhaustion at the high",
+   "body": "Volume dries up tick after tick into the high. No one is left to buy higher prices.",
+   "footprint": {
+    "rows": [
+     [
+      24530,
+      2,
+      1
+     ],
+     [
+      24529,
+      8,
+      6
+     ],
+     [
+      24528,
+      35,
+      22
+     ],
+     [
+      24527,
+      140,
+      180
+     ],
+     [
+      24526,
+      160,
+      210
+     ]
+    ],
+    "poc": 4,
+    "label": "Volume fades into the high"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Unfinished auction",
+   "body": "Bid AND ask trade at the extreme of the bar. The auction didn't complete, so price often comes back to finish the job.",
+   "tip": "Clean high: 0 on one side. Unfinished high: trades on both sides. Expect a revisit."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Trade ",
+     "WITH",
+     " stacked imbalances"
+    ],
+    [
+     "Fade only ",
+     "ABSORBED",
+     " extremes"
+    ],
+    [
+     "Mark ",
+     "UNFINISHED",
+     " auctions as targets"
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "4 footprint signals institutions can't hide 🔍\n\nCandles show you WHERE price went. The footprint shows you WHO pushed it there.\n\n1️⃣ Stacked imbalances: initiative buyers/sellers\n2️⃣ Absorption: limit orders soaking up aggression\n3️⃣ Exhaustion: volume dying into the extreme\n4️⃣ Unfinished auction: a magnet for a revisit\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #volumeanalysis #smartmoneyconcepts #daytrading #futurestrading #dax #nasdaq"
+}
