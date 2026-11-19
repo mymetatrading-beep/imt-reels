@@ -1,0 +1,17 @@
+{
+ "hook": [
+  {"words": ["Ho", "perso", "anni"], "y": 640, "size": 124},
+  {"words": ["e", "soldi", "in", "corsi"], "y": 810, "size": 110},
+  {"words": ["INUTILI."], "y": 1020, "size": 150, "pink": [0], "underline": 0}
+ ],
+ "book_line": "Così ho scritto il libro",
+ "badge": "DISPONIBILE SU AMAZON",
+ "list_title": "DENTRO TROVI",
+ "bullets": [
+  ["Le logiche ", "SMART MONEY", " semplici"],
+  ["Cosa ", "STUDIARE", " e in che ordine"],
+  ["Meno tempo e ", "SOLDI", " sprecati"]
+ ],
+ "cta": "LINK IN BIO",
+ "cta_sub": "e lo ordini con un tocco"
+}
