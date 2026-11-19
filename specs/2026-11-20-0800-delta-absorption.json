@@ -1,0 +1,205 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Green",
+    "candle."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Buyers",
+    "winning?"
+   ],
+   "y": 790,
+   "size": 110
+  },
+  {
+   "words": [
+    "Check",
+    "the",
+    "DELTA."
+   ],
+   "y": 1020,
+   "size": 130,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "New high. NEGATIVE delta.",
+  "subtitle": "Sellers absorbing every buy...",
+  "yrange": [
+   40,
+   92
+  ],
+  "level": {
+   "value": 78,
+   "label": "PREVIOUS HIGH",
+   "label_after": "ABSORBED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    50,
+    55,
+    48,
+    54
+   ],
+   [
+    54,
+    60,
+    53,
+    59
+   ],
+   [
+    59,
+    66,
+    58,
+    65
+   ],
+   [
+    65,
+    72,
+    64,
+    71
+   ],
+   [
+    71,
+    78,
+    70,
+    77
+   ],
+   [
+    77,
+    78,
+    70,
+    72
+   ],
+   [
+    72,
+    73,
+    66,
+    68
+   ],
+   [
+    68,
+    72,
+    67,
+    71
+   ],
+   [
+    71,
+    75,
+    70,
+    74
+   ],
+   [
+    74,
+    77,
+    73,
+    76
+   ],
+   [
+    76,
+    79,
+    75,
+    78
+   ],
+   [
+    78,
+    80,
+    77,
+    79
+   ],
+   [
+    79,
+    81,
+    78,
+    79.5
+   ],
+   [
+    79.5,
+    82,
+    79,
+    81
+   ],
+   [
+    81,
+    86,
+    70,
+    71
+   ],
+   [
+    71,
+    72,
+    63,
+    64
+   ],
+   [
+    64,
+    66,
+    57,
+    58
+   ],
+   [
+    58,
+    60,
+    52,
+    54
+   ],
+   [
+    54,
+    56,
+    48,
+    49
+   ],
+   [
+    49,
+    51,
+    45,
+    46
+   ]
+  ],
+  "marker": {
+   "candle": 13,
+   "y": 88,
+   "label": "DELTA -2,400",
+   "label_after": "TRAPPED",
+   "good": false
+  },
+  "hit_candle": 14,
+  "spike": true,
+  "thuds": [
+   13
+  ],
+  "impact": "ABSORPTION",
+  "punch": [
+   "Price lied. ",
+   "The delta didn't."
+  ]
+ },
+ "rules": [
+  [
+   "New high + ",
+   "NEGATIVE",
+   " delta"
+  ],
+  [
+   "= sellers ",
+   "ABSORBING",
+   ""
+  ],
+  [
+   "Wait for the ",
+   "SHIFT",
+   ", then act"
+  ]
+ ],
+ "caption": "Green candle. Buyers winning? Check the DELTA. 🔍\n\nWhen price prints a new high but delta is negative, passive sellers are absorbing every market buy. That's not strength — that's a trap being built.\n\n1️⃣ New high + negative delta\n2️⃣ = sellers absorbing\n3️⃣ Wait for the shift, then act\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #delta #footprint #volumeanalysis #smartmoneyconcepts #daytrading #dax #nasdaq"
+}

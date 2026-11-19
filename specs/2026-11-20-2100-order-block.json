@@ -1,0 +1,188 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Stop",
+    "chasing."
+   ],
+   "y": 640,
+   "size": 124
+  },
+  {
+   "words": [
+    "Let",
+    "price",
+    "come"
+   ],
+   "y": 810,
+   "size": 110
+  },
+  {
+   "words": [
+    "BACK."
+   ],
+   "y": 1020,
+   "size": 150,
+   "pink": [
+    0
+   ],
+   "underline": 0
+  }
+ ],
+ "chart": {
+  "title": "Impulse > return > GO",
+  "subtitle": "The ORDER BLOCK entry",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 57,
+   "label": "ORDER BLOCK",
+   "label_after": "OB HELD",
+   "below": true,
+   "right": true
+  },
+  "ohlc": [
+   [
+    60,
+    62,
+    55,
+    56
+   ],
+   [
+    56,
+    58,
+    52,
+    53
+   ],
+   [
+    53,
+    55,
+    50,
+    54
+   ],
+   [
+    54,
+    57,
+    52,
+    56
+   ],
+   [
+    56,
+    58,
+    54,
+    55
+   ],
+   [
+    55,
+    63,
+    54,
+    62
+   ],
+   [
+    62,
+    71,
+    61,
+    70
+   ],
+   [
+    70,
+    78,
+    69,
+    77
+   ],
+   [
+    77,
+    79,
+    72,
+    73
+   ],
+   [
+    73,
+    74,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    56,
+    58
+   ],
+   [
+    58,
+    63,
+    56,
+    62
+   ],
+   [
+    62,
+    70,
+    61,
+    69
+   ],
+   [
+    69,
+    77,
+    68,
+    76
+   ],
+   [
+    76,
+    84,
+    75,
+    83
+   ],
+   [
+    83,
+    90,
+    82,
+    89
+   ],
+   [
+    89,
+    91,
+    86,
+    88
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 50,
+   "label": "BUY ON RETURN",
+   "good": true
+  },
+  "hit_candle": 16,
+  "impact": "+3R",
+  "impact_bad": false,
+  "punch": [
+   "Patience ",
+   "pays the R."
+  ]
+ },
+ "rules": [
+  [
+   "Find the ",
+   "IMPULSE",
+   ""
+  ],
+  [
+   "Mark the ",
+   "ORDER BLOCK",
+   ""
+  ],
+  [
+   "Enter on the ",
+   "RETURN",
+   ""
+  ]
+ ],
+ "caption": "Stop chasing. Let price come BACK. ⏳\n\nThe big move already happened? Good. Mark the order block it left behind and wait. The best entries come on the return, with a tight stop and a clear target.\n\n1️⃣ Find the impulse\n2️⃣ Mark the order block\n3️⃣ Enter on the return\n\nFollow @institutionalmetatrading for a new SMC rule every day.\n\nEducational content. Not financial advice.\n\n#orderblock #smartmoneyconcepts #smc #orderflow #daytrading #tradingstrategy #dax #nasdaq"
+}
