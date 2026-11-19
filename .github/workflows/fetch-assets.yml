@@ -1,0 +1,24 @@
+name: Scarica asset
+on:
+  push:
+    paths: ["assets/urls.txt"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica le immagini elencate in assets/urls.txt
+        run: |
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            curl -fsSL -A "Mozilla/5.0" -o "assets/$name" "$url"
+          done < assets/urls.txt
+      - name: Salva
+        run: |
+          git config user.name "imt-bot"
+          git config user.email "imt-bot@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || (git commit -m "Asset scaricati" && git pull --rebase && git push)
