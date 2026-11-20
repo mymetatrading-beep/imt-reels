@@ -10,3 +10,4 @@
 - 2026-11-20 21:00 — "Stop chasing. Let price come BACK." (reels/2026-11-20-2100-order-block.mp4) [programmato]
 - 2026-11-20 10:00 STORIA quiz: new high + delta -1,800 (risposta 18:00)
 - 2026-11-20 12:30 CAROSELLO: 4 footprint signals institutions can't hide (stacked imbalances, absorption, exhaustion, unfinished auction)
+- 2026-11-20 — Risk:Reward / win rate: "70% win rate... and still LOSING?" (reels/2026-11-20-risk-reward.mp4) [Metricool]
