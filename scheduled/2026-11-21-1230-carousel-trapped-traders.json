@@ -1,0 +1,15 @@
+{
+  "publish_at": "2026-11-21T12:30:00+01:00",
+  "type": "CAROUSEL",
+  "media": [
+    "posts/2026-11-21-1230-carousel-trapped-traders-01.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-02.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-03.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-04.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-05.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-06.jpg",
+    "posts/2026-11-21-1230-carousel-trapped-traders-07.jpg"
+  ],
+  "caption": "How to spot TRAPPED traders on the footprint 🪤\n\nA trap is not a pattern on the candle. It's a mismatch between aggression and result: heavy market selling that fails to move price. When that happens, the aggressive side is stuck and their stops become liquidity.\n\n1️⃣ Stacked sell imbalances at the low (bid >= 3x the ask one tick above)\n2️⃣ No follow-through: price closes back above support\n3️⃣ Delta flips positive as shorts cover\n4️⃣ Their stops above the breakdown bar are the first target\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #trappedtraders #volumeanalysis #smartmoneyconcepts #daytrading #futurestrading #nasdaq",
+  "buffer_id": "6b0033f4c1f33e2aa5bdf056"
+}
