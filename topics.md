@@ -11,3 +11,8 @@
 - 2026-11-20 10:00 STORIA quiz: new high + delta -1,800 (risposta 18:00)
 - 2026-11-20 12:30 CAROSELLO: 4 footprint signals institutions can't hide (stacked imbalances, absorption, exhaustion, unfinished auction)
 - 2026-11-20 — Risk:Reward / win rate: "70% win rate... and still LOSING?" (reels/2026-11-20-risk-reward.mp4) [Metricool]
+- 2026-11-21 08:00 — Trapped traders sul footprint (stacked sell imbalances + no follow-through + reclaim): "They sold the breakdown. Now they're TRAPPED." (reels/2026-11-21-0800-trapped-traders.mp4) [programmato]
+- 2026-11-21 10:00 STORIA quiz: 3 stacked sell imbalances al minimo + chiusura sopra il supporto (risposta 18:00)
+- 2026-11-21 12:30 CAROSELLO: How to spot TRAPPED traders on the footprint (aggressione al minimo, no follow-through, delta flip, stop come target)
+- 2026-11-21 15:30 — VWAP +2 SD + divergenza CVD (mean reversion vs trend day): "Far from VWAP? That's not a SIGNAL." (reels/2026-11-21-1530-vwap-deviation.mp4) [programmato]
+- 2026-11-21 21:00 — SMC premium/discount (50% della gamba): "Good setup. Wrong price. You bought PREMIUM." (reels/2026-11-21-2100-premium-discount.mp4) [programmato]

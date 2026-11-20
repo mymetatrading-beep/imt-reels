@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Breakdown bar: 3 stacked SELL imbalances at the low. Next bar closes back above support. What now?",
+   "options": [
+    "Sellers in control, add shorts",
+    "Sellers are trapped, watch for a squeeze",
+    "Nothing. Imbalances only matter at highs"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

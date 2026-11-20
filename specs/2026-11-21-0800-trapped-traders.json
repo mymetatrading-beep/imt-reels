@@ -1,0 +1,194 @@
+{
+ "hook": [
+  {
+   "words": [
+    "They",
+    "sold",
+    "the"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "breakdown."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Now",
+    "they're",
+    "TRAPPED."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Breakdown > no follow-through",
+  "subtitle": "Sellers stuck below support...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 60,
+   "label": "SUPPORT",
+   "label_after": "RECLAIMED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    70,
+    73,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    63,
+    64
+   ],
+   [
+    64,
+    67,
+    61,
+    66
+   ],
+   [
+    66,
+    70,
+    65,
+    69
+   ],
+   [
+    69,
+    71,
+    64,
+    65
+   ],
+   [
+    65,
+    66,
+    61,
+    62
+   ],
+   [
+    62,
+    66,
+    61,
+    65
+   ],
+   [
+    65,
+    68,
+    63,
+    64
+   ],
+   [
+    64,
+    65,
+    60.5,
+    61
+   ],
+   [
+    61,
+    63,
+    60.5,
+    62
+   ],
+   [
+    62,
+    62.5,
+    52,
+    54
+   ],
+   [
+    54,
+    58,
+    53,
+    57
+   ],
+   [
+    57,
+    70,
+    56,
+    69
+   ],
+   [
+    69,
+    74,
+    68,
+    73
+   ],
+   [
+    73,
+    77,
+    71,
+    76
+   ],
+   [
+    76,
+    80,
+    74,
+    79
+   ],
+   [
+    79,
+    83,
+    78,
+    82
+   ],
+   [
+    82,
+    85,
+    80,
+    84
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 48,
+   "label": "3 SELL IMBALANCES",
+   "label_after": "TRAPPED",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   10
+  ],
+  "impact": "SQUEEZE",
+  "impact_bad": false,
+  "punch": [
+   "Their stops ",
+   "are the fuel."
+  ]
+ },
+ "rules": [
+  [
+   "Stacked ",
+   "SELLS",
+   " at the low"
+  ],
+  [
+   "No follow-through = ",
+   "TRAP",
+   ""
+  ],
+  [
+   "Act on the ",
+   "RECLAIM",
+   ""
+  ]
+ ],
+ "caption": "They sold the breakdown. Now they're TRAPPED. 🪤\n\nAggressive sellers hit the bid at the low: 3 stacked sell imbalances on the footprint. But price can't follow through and closes back above support. Those shorts are now underwater, and their buy stops above the breakdown bar become the fuel for the squeeze.\n\n1️⃣ Stacked sell imbalances at the low\n2️⃣ No follow-through = trap\n3️⃣ Act on the reclaim, invalidate below the trap low\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #trappedtraders #volumeanalysis #smartmoneyconcepts #daytrading #futurestrading #nasdaq"
+}

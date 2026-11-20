@@ -1,0 +1,152 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · FOOTPRINT",
+   "title": [
+    "How to spot",
+    "TRAPPED",
+    "traders on the",
+    "footprint"
+   ],
+   "pink": [
+    1
+   ],
+   "sub": "Read who is stuck, then follow their stops."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "Aggression at the low",
+   "body": "The breakdown bar prints 3 stacked sell imbalances: bid volume at least 3x the ask one tick above. Sellers are hitting the bid with size.",
+   "footprint": {
+    "rows": [
+     [
+      24512,
+      40,
+      35
+     ],
+     [
+      24511,
+      95,
+      30
+     ],
+     [
+      24510,
+      160,
+      28
+     ],
+     [
+      24509,
+      210,
+      25
+     ],
+     [
+      24508,
+      245,
+      22
+     ],
+     [
+      24507,
+      60,
+      18
+     ]
+    ],
+    "sell_imb": [
+     2,
+     3,
+     4
+    ],
+    "label": "160 vs 30 · 210 vs 28 · 245 vs 25"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "No follow-through",
+   "body": "All that aggression should push price lower. It doesn't. The next bar can't make a new low and closes back above the broken support.",
+   "tip": "Aggression + no progress = someone passive is absorbing. The sellers are now trapped."
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "Delta flips positive",
+   "body": "The reclaim bar shows stacked BUY imbalances. Trapped shorts are forced to cover with market buys, adding fuel.",
+   "footprint": {
+    "rows": [
+     [
+      24513,
+      30,
+      55
+     ],
+     [
+      24512,
+      20,
+      190
+     ],
+     [
+      24511,
+      35,
+      230
+     ],
+     [
+      24510,
+      40,
+      175
+     ],
+     [
+      24509,
+      50,
+      70
+     ],
+     [
+      24508,
+      45,
+      30
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "label": "Delta +530: shorts covering"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Where their stops sit",
+   "body": "Trapped sellers place stops above the breakdown bar high. That cluster is the first liquidity target.",
+   "tip": "Trigger: the reclaim. Invalidation: below the trap low. Target: the breakdown bar high."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Spot ",
+     "STACKED",
+     " sells at the low"
+    ],
+    [
+     "No follow-through = ",
+     "TRAP",
+     ""
+    ],
+    [
+     "Trade the ",
+     "RECLAIM",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "How to spot TRAPPED traders on the footprint 🪤\n\nA trap is not a pattern on the candle. It's a mismatch between aggression and result: heavy market selling that fails to move price. When that happens, the aggressive side is stuck and their stops become liquidity.\n\n1️⃣ Stacked sell imbalances at the low (bid >= 3x the ask one tick above)\n2️⃣ No follow-through: price closes back above support\n3️⃣ Delta flips positive as shorts cover\n4️⃣ Their stops above the breakdown bar are the first target\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #trappedtraders #volumeanalysis #smartmoneyconcepts #daytrading #futurestrading #nasdaq"
+}

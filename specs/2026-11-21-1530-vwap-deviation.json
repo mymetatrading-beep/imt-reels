@@ -1,0 +1,192 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Far",
+    "from",
+    "VWAP?"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "That's",
+    "not",
+    "a"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "SIGNAL."
+   ],
+   "y": 1020,
+   "size": 150,
+   "pink": [
+    0
+   ],
+   "underline": 0
+  }
+ ],
+ "chart": {
+  "title": "+2 SD + CVD divergence",
+  "subtitle": "The rubber band snaps back",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 82,
+   "label": "VWAP +2 SD",
+   "label_after": "REJECTED"
+  },
+  "ohlc": [
+   [
+    50,
+    53,
+    49,
+    52
+   ],
+   [
+    52,
+    56,
+    51,
+    55
+   ],
+   [
+    55,
+    57,
+    53,
+    54
+   ],
+   [
+    54,
+    59,
+    53,
+    58
+   ],
+   [
+    58,
+    63,
+    57,
+    62
+   ],
+   [
+    62,
+    64,
+    60,
+    61
+   ],
+   [
+    61,
+    67,
+    60,
+    66
+   ],
+   [
+    66,
+    71,
+    65,
+    70
+   ],
+   [
+    70,
+    74,
+    69,
+    73
+   ],
+   [
+    73,
+    79,
+    72,
+    78
+   ],
+   [
+    78,
+    82,
+    76,
+    77
+   ],
+   [
+    77,
+    79,
+    74,
+    75
+   ],
+   [
+    75,
+    80,
+    74,
+    79
+   ],
+   [
+    79,
+    83.5,
+    78,
+    80
+   ],
+   [
+    80,
+    81,
+    68,
+    69
+   ],
+   [
+    69,
+    71,
+    64,
+    65
+   ],
+   [
+    65,
+    67,
+    61,
+    62
+   ],
+   [
+    62,
+    63,
+    58,
+    60
+   ]
+  ],
+  "marker": {
+   "candle": 13,
+   "y": 90,
+   "label": "CVD LOWER HIGH",
+   "label_after": "DIVERGENCE",
+   "good": false
+  },
+  "hit_candle": 14,
+  "spike": true,
+  "thuds": [
+   13
+  ],
+  "impact": "SNAP BACK",
+  "impact_bad": false,
+  "punch": [
+   "Distance isn't a signal. ",
+   "Delta is."
+  ]
+ },
+ "rules": [
+  [
+   "Wait for the ",
+   "+2 SD",
+   " band"
+  ],
+  [
+   "Need a ",
+   "CVD",
+   " divergence"
+  ],
+  [
+   "Target ",
+   "VWAP",
+   ", not the moon"
+  ]
+ ],
+ "caption": "Far from VWAP? That's not a signal. 📏\n\nOn a trend day price can ride the +1 and +2 standard deviation bands for hours, and every blind fade gets run over. The edge appears when price makes a higher high at +2 SD while cumulative delta prints a lower high: buyers are no longer lifting offers, so the move is running on fumes.\n\n1️⃣ Wait for the +2 SD band\n2️⃣ Require a CVD divergence\n3️⃣ Target VWAP, not the moon\n\nFollow @institutionalmetatrading for daily order flow rules.\n\nEducational content. Not financial advice.\n\n#vwap #orderflow #cumulativedelta #volumeanalysis #meanreversion #daytrading #futurestrading #dax"
+}
