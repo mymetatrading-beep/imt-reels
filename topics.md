@@ -16,3 +16,4 @@
 - 2026-11-21 12:30 CAROSELLO: How to spot TRAPPED traders on the footprint (aggressione al minimo, no follow-through, delta flip, stop come target)
 - 2026-11-21 15:30 — VWAP +2 SD + divergenza CVD (mean reversion vs trend day): "Far from VWAP? That's not a SIGNAL." (reels/2026-11-21-1530-vwap-deviation.mp4) [programmato]
 - 2026-11-21 21:00 — SMC premium/discount (50% della gamba): "Good setup. Wrong price. You bought PREMIUM." (reels/2026-11-21-2100-premium-discount.mp4) [programmato]
+- 2026-11-21 08:00 — Breakeven troppo presto (stop a BE a +1R, wick lo prende, poi +3R): "Breakeven isn't safe. It's EXPENSIVE." (reels/2026-11-21-breakeven-too-early.mp4) [Metricool]
