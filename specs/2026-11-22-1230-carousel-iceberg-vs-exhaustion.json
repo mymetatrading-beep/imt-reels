@@ -1,0 +1,136 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · FOOTPRINT · DOM",
+   "title": [
+    "Iceberg or",
+    "EXHAUSTION?",
+    "Who really",
+    "stopped the move"
+   ],
+   "pink": [
+    1
+   ],
+   "sub": "Two ways a trend dies. Two different trades."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "The iceberg: size at one price",
+   "body": "Sellers keep hitting 24,480. The footprint shows 1,450 on the bid at that single price, while every other tick trades a few hundred.",
+   "footprint": {
+    "rows": [
+     [
+      24484,
+      90,
+      60
+     ],
+     [
+      24483,
+      140,
+      75
+     ],
+     [
+      24482,
+      180,
+      95
+     ],
+     [
+      24481,
+      210,
+      120
+     ],
+     [
+      24480,
+      1450,
+      160
+     ]
+    ],
+    "poc": 4,
+    "sell_imb": [
+     4
+    ],
+    "label": "1,450 at 24,480: price never traded below"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "The DOM gives it away",
+   "body": "The bid at 24,480 never shows more than 60 lots, yet 1,450 trade there. Each time it is hit, it refreshes.",
+   "tip": "Traded volume far above displayed size = hidden passive buyer. Aggression without progress is absorption."
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "Exhaustion: nobody left to sell",
+   "body": "Now the opposite. At the low, volume dries up: a handful of contracts at the extreme. Sellers didn't meet a wall, they ran out of fuel.",
+   "footprint": {
+    "rows": [
+     [
+      24484,
+      160,
+      140
+     ],
+     [
+      24483,
+      120,
+      110
+     ],
+     [
+      24482,
+      70,
+      65
+     ],
+     [
+      24481,
+      30,
+      20
+     ],
+     [
+      24480,
+      8,
+      20
+     ]
+    ],
+    "label": "Low prints 8 x 20: the move ran out of sellers"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Same stop, different trade",
+   "body": "Iceberg: a defended level. Buy the reclaim, stop one tick below the iceberg. Exhaustion: a weak low with no defender, often revisited later.",
+   "tip": "Confirm both with delta: it must flip positive and price must close back above the level."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Big volume, no progress = ",
+     "ICEBERG",
+     ""
+    ],
+    [
+     "Tiny volume at the low = ",
+     "EXHAUSTION",
+     ""
+    ],
+    [
+     "Trade the ",
+     "RECLAIM",
+     " only"
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "Iceberg or EXHAUSTION? Who really stopped the move 🧊\n\nA selloff can stop for two opposite reasons. An iceberg is a hidden passive buyer: huge volume at one price, far above what the DOM displays, and price can't trade through it. Exhaustion is the absence of sellers: volume dries up at the low with tiny prints. They look the same on a candle chart, but they are different trades.\n\n1️⃣ Big volume at one price, no progress = iceberg (defended level)\n2️⃣ Traded size far above displayed size on the DOM = hidden order refilling\n3️⃣ Tiny volume at the extreme = exhaustion (weak low, often revisited)\n4️⃣ In both cases wait for delta to flip and price to reclaim the level\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #icebergorders #footprint #exhaustion #absorption #volumeanalysis #daytrading #futurestrading"
+}

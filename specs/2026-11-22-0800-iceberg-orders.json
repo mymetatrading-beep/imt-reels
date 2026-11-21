@@ -1,0 +1,198 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Same",
+    "price."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Hit",
+    "4",
+    "times."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "It's",
+    "an",
+    "ICEBERG."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Sellers hit one price > it holds",
+  "subtitle": "Hidden size keeps refilling the bid...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 55,
+   "label": "BID 24,480",
+   "label_after": "DEFENDED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    82,
+    84,
+    78,
+    79
+   ],
+   [
+    79,
+    80,
+    74,
+    75
+   ],
+   [
+    75,
+    77,
+    72,
+    76
+   ],
+   [
+    76,
+    77,
+    70,
+    71
+   ],
+   [
+    71,
+    72,
+    66,
+    67
+   ],
+   [
+    67,
+    69,
+    63,
+    64
+   ],
+   [
+    64,
+    66,
+    60,
+    61
+   ],
+   [
+    61,
+    62,
+    56,
+    58
+   ],
+   [
+    58,
+    60,
+    55,
+    59
+   ],
+   [
+    59,
+    60,
+    55,
+    56
+   ],
+   [
+    56,
+    58,
+    55,
+    57.5
+   ],
+   [
+    57.5,
+    61,
+    55,
+    60.5
+   ],
+   [
+    60.5,
+    70,
+    60,
+    69
+   ],
+   [
+    69,
+    73,
+    67,
+    72
+   ],
+   [
+    72,
+    76,
+    71,
+    75
+   ],
+   [
+    75,
+    78,
+    73,
+    77
+   ],
+   [
+    77,
+    82,
+    76,
+    81
+   ],
+   [
+    81,
+    84,
+    79,
+    83
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 49,
+   "label": "1,450 SOLD. HELD.",
+   "label_after": "ICEBERG",
+   "good": true
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   8,
+   9,
+   10,
+   11
+  ],
+  "impact": "REFILLED",
+  "impact_bad": false,
+  "punch": [
+   "The DOM showed 60. ",
+   "They bought 1,450."
+  ]
+ },
+ "rules": [
+  [
+   "Volume ",
+   "PILES UP",
+   " at 1 price"
+  ],
+  [
+   "Price ",
+   "WON'T",
+   " trade through"
+  ],
+  [
+   "Enter on the ",
+   "RECLAIM",
+   ""
+  ]
+ ],
+ "caption": "Same price. Hit 4 times. It's an ICEBERG. 🧊\n\nSellers kept hitting 24,480 with market orders: 1,450 contracts traded there, while the DOM never showed more than 60 on the bid. That gap is a passive buyer refilling a hidden limit order. Aggression that can't move price one tick isn't strength, it's being absorbed.\n\n1️⃣ Volume piles up at one price on the footprint\n2️⃣ Traded size far above the displayed bid, and price won't trade through\n3️⃣ Enter on the reclaim, invalidate one tick below the iceberg\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #icebergorders #footprint #dom #volumeanalysis #daytrading #futurestrading #nasdaq"
+}

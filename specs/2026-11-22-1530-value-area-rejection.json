@@ -1,0 +1,182 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Price",
+    "broke"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "above",
+    "value."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Then",
+    "got",
+    "REJECTED."
+   ],
+   "y": 1020,
+   "size": 116,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Look above value > back inside",
+  "subtitle": "No acceptance above the VAH...",
+  "yrange": [
+   45,
+   85
+  ],
+  "level": {
+   "value": 70,
+   "label": "VALUE AREA HIGH",
+   "label_after": "REJECTED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    60,
+    64,
+    58,
+    63
+   ],
+   [
+    63,
+    66,
+    61,
+    62
+   ],
+   [
+    62,
+    65,
+    57,
+    58
+   ],
+   [
+    58,
+    62,
+    56,
+    61
+   ],
+   [
+    61,
+    67,
+    60,
+    66
+   ],
+   [
+    66,
+    69,
+    64,
+    68
+   ],
+   [
+    68,
+    72,
+    67,
+    71
+   ],
+   [
+    71,
+    76,
+    70,
+    75
+   ],
+   [
+    75,
+    77,
+    72,
+    73
+   ],
+   [
+    73,
+    74,
+    68,
+    69
+   ],
+   [
+    69,
+    70,
+    64,
+    65
+   ],
+   [
+    65,
+    66,
+    61,
+    62
+   ],
+   [
+    62,
+    63,
+    58,
+    60
+   ],
+   [
+    60,
+    62,
+    56,
+    57
+   ],
+   [
+    57,
+    59,
+    54,
+    55
+   ],
+   [
+    55,
+    57,
+    52,
+    53
+   ]
+  ],
+  "marker": {
+   "candle": 7,
+   "y": 80,
+   "label": "LOOK ABOVE",
+   "label_after": "FAILED AUCTION",
+   "good": true
+  },
+  "hit_candle": 9,
+  "spike": true,
+  "thuds": [
+   9
+  ],
+  "impact": "REJECTED",
+  "impact_bad": true,
+  "punch": [
+   "Back inside value? ",
+   "Next stop: the POC."
+  ]
+ },
+ "rules": [
+  [
+   "Break above ",
+   "VALUE",
+   " high"
+  ],
+  [
+   "Back inside = ",
+   "FAILED",
+   ""
+  ],
+  [
+   "Target the ",
+   "POC",
+   ""
+  ]
+ ],
+ "caption": "Price broke above value. Then got REJECTED. 📊\n\nA break above the value area high is a question, not an answer. If the market accepts higher prices you see time and volume build up there. If the next 30-minute period closes back inside value, nobody wanted those prices: it's a failed auction, and price tends to rotate back to the POC and often the other side of value.\n\n1️⃣ Price breaks above the value area high\n2️⃣ Back inside value with no volume built above = failed auction\n3️⃣ Target the POC first, invalidate above the failed high\n\nFollow @institutionalmetatrading for daily order flow rules.\n\nEducational content. Not financial advice.\n\n#marketprofile #volumeprofile #orderflow #valuearea #auctionmarkettheory #daytrading #futurestrading #es"
+}

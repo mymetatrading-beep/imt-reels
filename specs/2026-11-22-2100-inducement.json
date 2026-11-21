@@ -1,0 +1,192 @@
+{
+ "hook": [
+  {
+   "words": [
+    "That",
+    "first"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "pullback?",
+    "It's"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "INDUCEMENT."
+   ],
+   "y": 1020,
+   "size": 130,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Bait low > sweep > order block",
+  "subtitle": "Early longs become the liquidity...",
+  "yrange": [
+   45,
+   92
+  ],
+  "level": {
+   "value": 66,
+   "label": "INDUCEMENT",
+   "label_after": "SWEPT",
+   "right": true
+  },
+  "ohlc": [
+   [
+    55,
+    59,
+    54,
+    58
+   ],
+   [
+    58,
+    63,
+    57,
+    62
+   ],
+   [
+    62,
+    64,
+    60,
+    61
+   ],
+   [
+    61,
+    68,
+    60,
+    67
+   ],
+   [
+    67,
+    72,
+    66,
+    71
+   ],
+   [
+    71,
+    74,
+    69,
+    70
+   ],
+   [
+    70,
+    71,
+    66,
+    67
+   ],
+   [
+    67,
+    72,
+    66.5,
+    71
+   ],
+   [
+    71,
+    75,
+    70,
+    74
+   ],
+   [
+    74,
+    76,
+    71,
+    72
+   ],
+   [
+    72,
+    73,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    59,
+    61
+   ],
+   [
+    61,
+    68,
+    60,
+    67
+   ],
+   [
+    67,
+    73,
+    66,
+    72
+   ],
+   [
+    72,
+    78,
+    71,
+    77
+   ],
+   [
+    77,
+    82,
+    76,
+    81
+   ],
+   [
+    81,
+    86,
+    80,
+    85
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 55,
+   "label": "EARLY LONGS",
+   "label_after": "STOPPED",
+   "good": true
+  },
+  "hit_candle": 13,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "REAL ENTRY",
+  "impact_bad": false,
+  "punch": [
+   "The first pullback ",
+   "is the bait."
+  ]
+ },
+ "rules": [
+  [
+   "First pullback = ",
+   "BAIT",
+   ""
+  ],
+  [
+   "Wait for the ",
+   "SWEEP",
+   ""
+  ],
+  [
+   "Enter at the ",
+   "ORDER BLOCK",
+   ""
+  ]
+ ],
+ "caption": "That first pullback? It's INDUCEMENT. 🎣\n\nIn a strong move, the first obvious pullback low attracts early longs, and their stops sit right below it. Smart money often sweeps that low to fill size before the real move, and only then price taps the order block underneath. The early buyers are right on direction and still get stopped.\n\n1️⃣ Treat the first obvious pullback as bait\n2️⃣ Wait for the sweep of the inducement low\n3️⃣ Enter at the order block below it, invalidate under the block\n\nFollow @institutionalmetatrading for daily SMC and order flow rules.\n\nEducational content. Not financial advice.\n\n#smartmoneyconcepts #smc #inducement #orderblock #liquidity #daytrading #forex #nasdaq"
+}

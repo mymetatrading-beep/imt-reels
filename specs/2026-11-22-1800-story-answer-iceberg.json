@@ -1,0 +1,13 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "answer",
+   "kicker": "QUIZ ANSWER",
+   "correct": "B",
+   "answer": "An iceberg: a hidden buyer refilling the bid.",
+   "explain": "Traded volume far above the displayed size means a passive limit order keeps reloading. Exhaustion shows tiny volume, not 1,450.",
+   "footer": "Full breakdown in today's 8:00 Reel and the 12:30 carousel."
+  }
+ ]
+}

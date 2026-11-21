@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "1,450 contracts sold at 24,480. The DOM never showed more than 60 on the bid. Price holds. What is it?",
+   "options": [
+    "Exhaustion: sellers ran out",
+    "An iceberg: a hidden buyer refilling",
+    "A spoof: fake orders, ignore it"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

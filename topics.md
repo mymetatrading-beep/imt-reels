@@ -17,3 +17,8 @@
 - 2026-11-21 15:30 — VWAP +2 SD + divergenza CVD (mean reversion vs trend day): "Far from VWAP? That's not a SIGNAL." (reels/2026-11-21-1530-vwap-deviation.mp4) [programmato]
 - 2026-11-21 21:00 — SMC premium/discount (50% della gamba): "Good setup. Wrong price. You bought PREMIUM." (reels/2026-11-21-2100-premium-discount.mp4) [programmato]
 - 2026-11-21 08:00 — Breakeven troppo presto (stop a BE a +1R, wick lo prende, poi +3R): "Breakeven isn't safe. It's EXPENSIVE." (reels/2026-11-21-breakeven-too-early.mp4) [Metricool]
+- 2026-11-22 08:00 — Iceberg orders (1,450 eseguiti a un prezzo vs 60 visibili sul DOM, refill passivo): "Same price. Hit 4 times. It's an ICEBERG." (reels/2026-11-22-0800-iceberg-orders.mp4) [programmato]
+- 2026-11-22 10:00 STORIA quiz: 1,450 venduti a 24,480 con DOM a 60 lotti, prezzo tiene (risposta 18:00: iceberg)
+- 2026-11-22 12:30 CAROSELLO: Iceberg or EXHAUSTION? (footprint iceberg vs esaurimento, DOM refresh, conferma delta + reclaim)
+- 2026-11-22 15:30 — Value area rejection / failed auction sopra il VAH, target POC: "Price broke above value. Then got REJECTED." (reels/2026-11-22-1530-value-area-rejection.mp4) [programmato]
+- 2026-11-22 21:00 — SMC inducement (primo pullback come esca, sweep, order block): "That first pullback? It's INDUCEMENT." (reels/2026-11-22-2100-inducement.mp4) [programmato]
