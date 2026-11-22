@@ -13,6 +13,9 @@ Coda: queue/*.json, un file per post:
   "media": ["reels/2026-11-23-tema.mp4"],  # percorsi nel repo o URL completi
   "caption": "testo...",
   "channel": "instagram",                 # facoltativo (default instagram)
+  "no_youtube": false,                     # true = NON pubblicarlo anche come Short
+  # ogni REELS su Instagram parte in automatico anche come YouTube Short
+  # (se il canale YouTube e' collegato in Buffer)
   "draft": false                           # true = solo bozza in Buffer (test)
 }
 Flusso dei file: queue/ -> scheduled/ (caricato in Buffer) -> published/.
@@ -45,7 +48,9 @@ def gql(query, variables=None):
 
 def channels():
     if os.path.exists(CHANNELS_CACHE):
-        return json.load(open(CHANNELS_CACHE))
+        cached = json.load(open(CHANNELS_CACHE))
+        if "youtube" in cached:
+            return cached
     orgs = gql("query { account { organizations { id name } } }")["account"]["organizations"]
     found = {}
     for o in orgs:
@@ -96,6 +101,9 @@ def build_input(post, channel_id, asset_style):
     }
     if post.get("channel", "instagram") == "instagram":
         inp["metadata"] = {"instagram": {"type": ig_type, "shouldShareToFeed": kind != "STORIES"}}
+    elif post.get("channel") == "youtube":
+        inp["metadata"] = {"youtube": {"title": post["yt_title"], "categoryId": "27",
+                                       "madeForKids": False, "notifySubscribers": True}}
     if post.get("draft"):
         inp["saveToDraft"] = True
     return inp
@@ -118,18 +126,57 @@ def push(post, chans):
     raise last
 
 
+AMAZON = "https://www.amazon.it/dp/B0C9S5R573"
+
+
+def youtube_twin(post):
+    """Stesso Reel adattato a YouTube Shorts (titolo + descrizione)."""
+    cap = post.get("caption", "")
+    first = cap.strip().split("\n")[0].strip() or "Order flow rule"
+    title = (first[:88].rstrip() + " #shorts")[:100]
+    desc = cap.replace("Follow @institutionalmetatrading", "Subscribe to @imetatrading")
+    desc = desc.replace("Il link per acquistarlo è nella BIO: un tocco e sei su Amazon.",
+                        "Acquistalo su Amazon: " + AMAZON)
+    if "libro" in post["media"][0] and AMAZON not in desc:
+        desc = desc.replace("\n\n#", f"\n\n📖 Amazon: {AMAZON}\n\n#", 1)
+    desc += "\n\nInstagram: https://www.instagram.com/institutionalmetatrading/"
+    return {**post, "channel": "youtube", "yt_title": title, "caption": desc}
+
+
+def wants_youtube(post):
+    return (post.get("type", "REELS").upper() == "REELS"
+            and post.get("channel", "instagram") == "instagram"
+            and not post.get("draft") and not post.get("no_youtube"))
+
+
+def add_youtube(f, post, chans):
+    """Carica lo Short gemello; in caso di errore non blocca Instagram."""
+    if "youtube" not in chans or post.get("buffer_id_youtube") or not wants_youtube(post):
+        return False
+    try:
+        post["buffer_id_youtube"] = push(youtube_twin(post), chans)
+        json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
+        print(f"OK YouTube {f} -> Buffer {post['buffer_id_youtube']}")
+        return True
+    except Exception as e:
+        print(f"ERRORE YouTube {f}: {e}", file=sys.stderr)
+        return False
+
+
 def main():
     now = datetime.now(timezone.utc)
     os.makedirs("scheduled", exist_ok=True)
 
     # 1) i post gia' in Buffer con orario passato sono stati pubblicati
     in_buffer = 0
+    chans = channels()
     for f in sorted(glob.glob("scheduled/*.json")):
         p = json.load(open(f))
         if datetime.fromisoformat(p["publish_at"]) <= now:
             shutil.move(f, os.path.join("published", os.path.basename(f)))
         else:
             in_buffer += 1
+            add_youtube(f, p, chans)
 
     # 2) riempi i posti liberi con i prossimi post della coda
     todo = sorted(glob.glob("queue/*.json"),
@@ -138,7 +185,6 @@ def main():
     print(f"In Buffer: {in_buffer} | posti liberi: {free} | in coda: {len(todo)}")
     if free <= 0 or not todo:
         return
-    chans = channels()
     errors = 0
     for f in todo[:free]:
         post = json.load(open(f))
@@ -149,6 +195,7 @@ def main():
             bid = push(post, chans)
             post["buffer_id"] = bid
             json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
+            add_youtube(f, post, chans)
             dest = "published" if post.get("draft") else "scheduled"
             shutil.move(f, os.path.join(dest, os.path.basename(f)))
             print(f"OK {f} -> Buffer {bid} ({'bozza' if post.get('draft') else post['publish_at']})")
