@@ -22,3 +22,4 @@
 - 2026-11-22 12:30 CAROSELLO: Iceberg or EXHAUSTION? (footprint iceberg vs esaurimento, DOM refresh, conferma delta + reclaim)
 - 2026-11-22 15:30 — Value area rejection / failed auction sopra il VAH, target POC: "Price broke above value. Then got REJECTED." (reels/2026-11-22-1530-value-area-rejection.mp4) [programmato]
 - 2026-11-22 21:00 — SMC inducement (primo pullback come esca, sweep, order block): "That first pullback? It's INDUCEMENT." (reels/2026-11-22-2100-inducement.mp4) [programmato]
+- 2026-11-22 08:00 — Averaging down / aggiungere a una posizione in perdita (stop cancellato, +2 lotti, -4R invece di -1R): "Adding to a loser? That's HOPE." (reels/2026-11-22-averaging-down.mp4) [Metricool]
