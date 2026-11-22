@@ -130,7 +130,7 @@ AMAZON = "https://amzn.eu/d/0fsxwSEH"
 
 LINKS = [  # (emoji, testo EN, testo IT, link) - footer fisso sotto ogni Short
     ("📖", 'My book "Smart Money Concepts" on Amazon', 'Il mio libro "Smart Money Concepts" su Amazon', AMAZON),
-    ("🎁", 'FREE guide "La bussola del trading" (Italian)', 'Guida GRATUITA "La bussola del trading"', "https://subscribepage.io/KiSZN8"),
+    ("🎁", '2 FREE gifts: trading guide + free book chapter on Liquidity (Italian)', '2 regali GRATIS: guida "La bussola del trading" + capitolo del libro sulla Liquidità', "https://subscribepage.io/KiSZN8"),
     ("📢", "Free Telegram analysis channel", "Canale Telegram gratuito di analisi", "https://t.me/+EkcsHUUEjig3YTY0"),
     ("🎓", "Free beginner course (playlist)", "Corso base gratuito per principianti", "https://youtube.com/playlist?list=PL_oGz3uWRGI2C2UsExwjXxXpX_tBQrVCr"),
     ("🚀", "My trading program", "Il mio percorso di trading", "https://mymetatrader.gumroad.com/l/ghllv"),
