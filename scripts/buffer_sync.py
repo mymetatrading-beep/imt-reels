@@ -126,7 +126,23 @@ def push(post, chans):
     raise last
 
 
-AMAZON = "https://www.amazon.it/dp/B0C9S5R573"
+AMAZON = "https://amzn.eu/d/0fsxwSEH"
+
+LINKS = [  # (emoji, testo EN, testo IT, link) - footer fisso sotto ogni Short
+    ("📖", 'My book "Smart Money Concepts" on Amazon', 'Il mio libro "Smart Money Concepts" su Amazon', AMAZON),
+    ("🎁", 'FREE guide "La bussola del trading" (Italian)', 'Guida GRATUITA "La bussola del trading"', "https://subscribepage.io/KiSZN8"),
+    ("📢", "Free Telegram analysis channel", "Canale Telegram gratuito di analisi", "https://t.me/+EkcsHUUEjig3YTY0"),
+    ("🎓", "Free beginner course (playlist)", "Corso base gratuito per principianti", "https://youtube.com/playlist?list=PL_oGz3uWRGI2C2UsExwjXxXpX_tBQrVCr"),
+    ("🚀", "My trading program", "Il mio percorso di trading", "https://mymetatrader.gumroad.com/l/ghllv"),
+    ("📸", "Instagram", "Instagram", "https://www.instagram.com/institutionalmetatrading/"),
+    ("✉️", "Info", "Info", "mymetatrading@gmail.com"),
+]
+
+
+def footer(italian, skip_book):
+    rows = [f"{e} {it if italian else en}: {url}" for e, en, it, url in LINKS
+            if not (skip_book and url == AMAZON)]
+    return "\n\n━━━━━━━━━━━━━━━\n" + "\n".join(rows)
 
 
 def youtube_twin(post):
@@ -137,9 +153,14 @@ def youtube_twin(post):
     desc = cap.replace("Follow @institutionalmetatrading", "Subscribe to @imetatrading")
     desc = desc.replace("Il link per acquistarlo è nella BIO: un tocco e sei su Amazon.",
                         "Acquistalo su Amazon: " + AMAZON)
-    if is_book(post) and AMAZON not in desc:
+    book = is_book(post)
+    if book and AMAZON not in desc:
         desc = desc.replace("\n\n#", f"\n\n📖 Amazon: {AMAZON}\n\n#", 1)
-    desc += "\n\nInstagram: https://www.instagram.com/institutionalmetatrading/"
+    # hashtag in fondo (YouTube ne usa max 15), footer con i link prima degli hashtag
+    body, sep, tags = desc.rpartition("\n\n#")
+    if not sep:
+        body, tags = desc, ""
+    desc = body + footer(italian=book, skip_book=book) + (("\n\n#" + tags) if tags else "")
     return {**post, "channel": "youtube", "yt_title": title, "caption": desc}
 
 
