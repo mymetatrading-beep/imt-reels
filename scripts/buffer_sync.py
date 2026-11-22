@@ -159,7 +159,13 @@ def add_youtube(f, post, chans):
         print(f"OK YouTube {f} -> Buffer {post['buffer_id_youtube']}")
         return True
     except Exception as e:
-        print(f"ERRORE YouTube {f}: {e}", file=sys.stderr)
+        if "maximum number of posts YouTube allows" in str(e):
+            # YouTube via Buffer: max 2 Short al giorno -> questo Reel resta solo su Instagram
+            post["no_youtube"] = True
+            json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
+            print(f"YouTube: limite 2/giorno raggiunto, {f} solo su Instagram")
+        else:
+            print(f"ERRORE YouTube {f}: {e}", file=sys.stderr)
         return False
 
 

@@ -6,7 +6,7 @@ Reel di IMT
 - `queue/*.json`: post da pubblicare (ora, video, didascalia)
 - GitHub Actions ogni 30 min carica in Buffer i prossimi post (max 9 alla volta, limite piano gratuito) → `scheduled/` → `published/`
 - Orari: 08:00, 15:30, 21:00 (Europe/Rome)
-- Ogni Reel esce anche come YouTube Short su @imetatrading (stesso orario, titolo = prima riga della didascalia, categoria Education). Per escluderne uno: `"no_youtube": true`
+- Ogni Reel esce anche come YouTube Short su @imetatrading (stesso orario, titolo = prima riga della didascalia, categoria Education). YouTube via Buffer accetta max 2 Short al giorno: passano i primi 2 Reel della giornata, gli altri restano solo su Instagram. Per escluderne uno: `"no_youtube": true`
 
 ## Reel del LIBRO (2 a settimana, domenica e mercoledì alle 19:00)
 - Libro: "Smart Money Concepts" di Glauco Giovinazzi – https://www.amazon.it/dp/B0C9S5R573
