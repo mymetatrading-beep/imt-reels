@@ -137,16 +137,39 @@ def youtube_twin(post):
     desc = cap.replace("Follow @institutionalmetatrading", "Subscribe to @imetatrading")
     desc = desc.replace("Il link per acquistarlo è nella BIO: un tocco e sei su Amazon.",
                         "Acquistalo su Amazon: " + AMAZON)
-    if "libro" in post["media"][0] and AMAZON not in desc:
+    if is_book(post) and AMAZON not in desc:
         desc = desc.replace("\n\n#", f"\n\n📖 Amazon: {AMAZON}\n\n#", 1)
     desc += "\n\nInstagram: https://www.instagram.com/institutionalmetatrading/"
     return {**post, "channel": "youtube", "yt_title": title, "caption": desc}
 
 
+BOOK_DAYS = (6, 2)   # domenica e mercoledi': giorni dei reel del libro
+
+
+def is_book(post):
+    return "libro" in post["media"][0]
+
+
 def wants_youtube(post):
-    return (post.get("type", "REELS").upper() == "REELS"
+    """YouTube via Buffer: max 2 Short al giorno.
+    Giorni del libro -> reel del libro + primo reel tecnico; altri giorni -> primi 2."""
+    if not (post.get("type", "REELS").upper() == "REELS"
             and post.get("channel", "instagram") == "instagram"
-            and not post.get("draft") and not post.get("no_youtube"))
+            and not post.get("draft") and not post.get("no_youtube")):
+        return False
+    if is_book(post):
+        return True
+    day = datetime.fromisoformat(post["publish_at"])
+    if day.weekday() not in BOOK_DAYS:
+        return True
+    tech = []
+    for f in glob.glob("queue/*.json") + glob.glob("scheduled/*.json") + glob.glob("published/*.json"):
+        q = json.load(open(f))
+        d = datetime.fromisoformat(q["publish_at"])
+        if (q.get("type", "REELS").upper() == "REELS" and not is_book(q)
+                and q.get("channel", "instagram") == "instagram" and d.date() == day.date()):
+            tech.append(q["publish_at"])
+    return not tech or post["publish_at"] == min(tech)
 
 
 def add_youtube(f, post, chans):
