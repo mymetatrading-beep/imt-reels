@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Price runs 60 points above the morning high. The POC stays at 24,410. What's the read?",
+   "options": [
+    "Trend day: buy every dip",
+    "No acceptance: back to POC",
+    "Ignore it: POC doesn't matter"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

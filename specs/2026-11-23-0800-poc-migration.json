@@ -1,0 +1,194 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Higher",
+    "prices."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Same",
+    "POC."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "It",
+    "won't",
+    "HOLD."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Price runs > value stays behind",
+  "subtitle": "The POC never left 24,410...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 57,
+   "label": "POC 24,410",
+   "label_after": "MAGNET",
+   "right": true
+  },
+  "ohlc": [
+   [
+    56,
+    59,
+    53,
+    57
+   ],
+   [
+    57,
+    60,
+    54,
+    55
+   ],
+   [
+    55,
+    58,
+    53,
+    57
+   ],
+   [
+    57,
+    59,
+    54,
+    56
+   ],
+   [
+    56,
+    58,
+    53,
+    57.5
+   ],
+   [
+    57.5,
+    63,
+    57,
+    62
+   ],
+   [
+    62,
+    68,
+    61,
+    67
+   ],
+   [
+    67,
+    72,
+    66,
+    71
+   ],
+   [
+    71,
+    77,
+    70,
+    76
+   ],
+   [
+    76,
+    82,
+    75,
+    81
+   ],
+   [
+    81,
+    86,
+    80,
+    84
+   ],
+   [
+    84,
+    87,
+    81,
+    82
+   ],
+   [
+    82,
+    83,
+    72,
+    73
+   ],
+   [
+    73,
+    75,
+    66,
+    67
+   ],
+   [
+    67,
+    69,
+    60,
+    61
+   ],
+   [
+    61,
+    62,
+    55,
+    56
+   ],
+   [
+    56,
+    59,
+    54,
+    58
+   ],
+   [
+    58,
+    60,
+    55,
+    57
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 91,
+   "label": "THIN HIGH",
+   "label_after": "NOT ACCEPTED",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "BACK TO POC",
+  "impact_bad": true,
+  "punch": [
+   "Value stayed behind. ",
+   "So did price."
+  ]
+ },
+ "rules": [
+  [
+   "Track the ",
+   "POC",
+   " every 30m"
+  ],
+  [
+   "POC stays ",
+   "BEHIND",
+   " = rejection"
+  ],
+  [
+   "Fade back to the ",
+   "POC",
+   ""
+  ]
+ ],
+ "caption": "Higher prices. Same POC. It won't HOLD. 📊\n\nPrice broke the morning range and ran 60 points, but the developing POC never left 24,410 and the new high printed thin volume. Price moved, value didn't: the market was out of balance without acceptance. With no business being done up there, the move rotated straight back to the POC.\n\n1️⃣ Track the developing POC every 30 minutes\n2️⃣ Price far from value while the POC stays behind = no acceptance\n3️⃣ Fade the move back toward the POC, not toward the next high\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #volumeprofile #pointofcontrol #marketprofile #auctionmarkettheory #daytrading #futurestrading #nasdaq"
+}

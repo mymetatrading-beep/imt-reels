@@ -1,0 +1,196 @@
+{
+ "hook": [
+  {
+   "words": [
+    "800",
+    "lots",
+    "offered."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Price",
+    "gets",
+    "close..."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "They",
+    "PULL",
+    "it."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "The DOM wall > gone on approach",
+  "subtitle": "Shorts sold in front of it...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 69,
+   "label": "OFFER 800 @ 24,520",
+   "label_after": "PULLED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    48,
+    51,
+    46,
+    50
+   ],
+   [
+    50,
+    54,
+    49,
+    53
+   ],
+   [
+    53,
+    57,
+    52,
+    56
+   ],
+   [
+    56,
+    60,
+    55,
+    59
+   ],
+   [
+    59,
+    63,
+    58,
+    62
+   ],
+   [
+    62,
+    66,
+    61,
+    65
+   ],
+   [
+    65,
+    68,
+    63,
+    64
+   ],
+   [
+    64,
+    68,
+    62,
+    67
+   ],
+   [
+    67,
+    68.5,
+    64,
+    65
+   ],
+   [
+    65,
+    68,
+    63,
+    67.5
+   ],
+   [
+    67.5,
+    68.8,
+    65,
+    66
+   ],
+   [
+    66,
+    68.9,
+    65,
+    68.5
+   ],
+   [
+    68.5,
+    78,
+    68,
+    77
+   ],
+   [
+    77,
+    81,
+    76,
+    80
+   ],
+   [
+    80,
+    84,
+    78,
+    83
+   ],
+   [
+    83,
+    85,
+    80,
+    81
+   ],
+   [
+    81,
+    86,
+    80,
+    85
+   ],
+   [
+    85,
+    89,
+    84,
+    88
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 60,
+   "label": "SHORTS SELL HERE",
+   "label_after": "TRAPPED",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "PULLED",
+  "impact_bad": false,
+  "punch": [
+   "The wall wasn't real. ",
+   "The breakout was."
+  ]
+ },
+ "rules": [
+  [
+   "DOM size = ",
+   "INTENT",
+   ", not fills"
+  ],
+  [
+   "Watch it ",
+   "PULL",
+   " on approach"
+  ],
+  [
+   "Trust ",
+   "TRADED",
+   " volume"
+  ]
+ ],
+ "caption": "800 lots offered. Price gets close... They PULL it. 🧱\n\nAn 800-lot offer sat at 24,520 on the DOM and looked like resistance, so shorts sold in front of it. As price came within two ticks, the size disappeared: it was pulled, not filled. Buyers lifted the empty offers, price broke out and the shorts who leaned on the wall were trapped. Displayed size is intent that can be cancelled. Traded volume is what actually happened.\n\n1️⃣ Size on the DOM is intent, not execution\n2️⃣ Watch whether it holds or gets pulled as price approaches\n3️⃣ Trust traded volume on the footprint over displayed size\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #dom #depthofmarket #orderbook #footprint #daytrading #futurestrading #nasdaq"
+}

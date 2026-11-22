@@ -23,3 +23,8 @@
 - 2026-11-22 15:30 — Value area rejection / failed auction sopra il VAH, target POC: "Price broke above value. Then got REJECTED." (reels/2026-11-22-1530-value-area-rejection.mp4) [programmato]
 - 2026-11-22 21:00 — SMC inducement (primo pullback come esca, sweep, order block): "That first pullback? It's INDUCEMENT." (reels/2026-11-22-2100-inducement.mp4) [programmato]
 - 2026-11-22 08:00 — Averaging down / aggiungere a una posizione in perdita (stop cancellato, +2 lotti, -4R invece di -1R): "Adding to a loser? That's HOPE." (reels/2026-11-22-averaging-down.mp4) [Metricool]
+- 2026-11-23 08:00 — POC migration / value acceptance (rally fuori range, POC fermo a 24,410, high sottile, ritorno al POC): "Higher prices. Same POC. It won't HOLD." (reels/2026-11-23-0800-poc-migration.mp4) [programmato]
+- 2026-11-23 10:00 STORIA quiz: prezzo +60 punti sopra il massimo del mattino, POC fermo a 24,410 (risposta 18:00: no acceptance, ritorno al POC)
+- 2026-11-23 12:30 CAROSELLO: Is the move ACCEPTED? (POC migration, value area più alte, stacked buy imbalances iniziative, failed migration con prints sottili)
+- 2026-11-23 15:30 — DOM pulling (offerta da 800 lotti a 24,520 ritirata all'avvicinarsi del prezzo, short intrappolati, breakout): "800 lots offered. Price gets close... They PULL it." (reels/2026-11-23-1530-dom-pulling.mp4) [programmato]
+- 2026-11-23 21:00 — Rischio correlato (long NQ+ES+YM all'1% ciascuno = -3R su una sola idea): "NQ. ES. YM. Three trades? No. ONE bet." (reels/2026-11-23-2100-correlated-risk.mp4) [programmato]

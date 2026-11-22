@@ -1,0 +1,183 @@
+{
+ "hook": [
+  {
+   "words": [
+    "NQ.",
+    "ES.",
+    "YM."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Three",
+    "trades?"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "No.",
+    "ONE",
+    "bet."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "3 longs, 1% each > one idea",
+  "subtitle": "Same market, same stop...",
+  "yrange": [
+   40,
+   80
+  ],
+  "level": {
+   "value": 61,
+   "label": "STOP (ALL 3)",
+   "label_after": "-3R AT ONCE",
+   "right": true
+  },
+  "ohlc": [
+   [
+    60,
+    63,
+    58,
+    62
+   ],
+   [
+    62,
+    66,
+    61,
+    65
+   ],
+   [
+    65,
+    69,
+    64,
+    68
+   ],
+   [
+    68,
+    72,
+    67,
+    71
+   ],
+   [
+    71,
+    73,
+    68,
+    69
+   ],
+   [
+    69,
+    72,
+    68,
+    71.5
+   ],
+   [
+    71.5,
+    73,
+    69,
+    70
+   ],
+   [
+    70,
+    71,
+    66,
+    67
+   ],
+   [
+    67,
+    69,
+    64,
+    65
+   ],
+   [
+    65,
+    67,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    61.5,
+    62
+   ],
+   [
+    62,
+    62.5,
+    50,
+    51
+   ],
+   [
+    51,
+    54,
+    48,
+    49
+   ],
+   [
+    49,
+    52,
+    46,
+    50
+   ],
+   [
+    50,
+    53,
+    47,
+    48
+   ],
+   [
+    48,
+    50,
+    44,
+    45
+   ]
+  ],
+  "marker": {
+   "candle": 5,
+   "y": 76,
+   "label": "3 LONGS, 1% EACH",
+   "label_after": "ONE IDEA",
+   "good": true
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "-3R",
+  "impact_bad": true,
+  "punch": [
+   "3 tickers, 1 idea. ",
+   "Size it as one."
+  ]
+ },
+ "rules": [
+  [
+   "Check ",
+   "CORRELATION",
+   " first"
+  ],
+  [
+   "Same idea = ",
+   "SAME",
+   " risk budget"
+  ],
+  [
+   "Split 1% ",
+   "ACROSS",
+   " them"
+  ]
+ ],
+ "caption": "NQ. ES. YM. Three trades? No. ONE bet. 🎯\n\nA trader goes long Nasdaq, S&P and Dow futures, risking 1% on each. It feels diversified, but the three indices move together: when the market sells off, all three stops get hit in the same candle. That's a 3% loss on one idea, three times the risk the plan allowed.\n\n1️⃣ Check correlation before opening a second position\n2️⃣ Highly correlated trades share the same risk budget\n3️⃣ Split your 1% across them instead of stacking it\n\nFollow @institutionalmetatrading for daily order flow and risk rules.\n\nEducational content. Not financial advice.\n\n#riskmanagement #positionsizing #correlation #tradingpsychology #daytrading #futurestrading #nasdaq #sp500"
+}

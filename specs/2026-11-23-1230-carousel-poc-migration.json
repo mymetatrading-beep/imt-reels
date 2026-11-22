@@ -1,0 +1,138 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · VOLUME PROFILE",
+   "title": [
+    "Is the move",
+    "ACCEPTED?",
+    "Read the POC,",
+    "not the candle"
+   ],
+   "pink": [
+    1
+   ],
+   "sub": "Price can lie for an hour. Value can't."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "Price moves first. Value decides.",
+   "body": "Price rallies 60 points out of the morning range. The question isn't how far it went, but whether volume followed it there.",
+   "tip": "Acceptance = time and volume at new prices. Rejection = a fast move and a fast return."
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "POC migration: the clean read",
+   "body": "Check the developing POC every 30 minutes. In a healthy trend it steps up: 24,410 > 24,445 > 24,480. Each step means business is being done higher.",
+   "tip": "Value areas that build higher and overlap less = initiative buyers in control."
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "Initiative buying builds new value",
+   "body": "At the breakout the footprint prints stacked buy imbalances: the ask lifts at 3x or more the bid one tick below, with delta rising.",
+   "footprint": {
+    "rows": [
+     [
+      24486,
+      40,
+      60
+     ],
+     [
+      24485,
+      35,
+      210
+     ],
+     [
+      24484,
+      55,
+      260
+     ],
+     [
+      24483,
+      70,
+      240
+     ],
+     [
+      24482,
+      80,
+      90
+     ],
+     [
+      24481,
+      95,
+      70
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "poc": 2,
+    "label": "210 vs 55 · 260 vs 70 · 240 vs 80"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Failed migration: the fade",
+   "body": "New highs, but the POC is still at 24,410 and the high prints thin volume. Price is out of value without acceptance.",
+   "footprint": {
+    "rows": [
+     [
+      24492,
+      12,
+      8
+     ],
+     [
+      24491,
+      28,
+      22
+     ],
+     [
+      24490,
+      41,
+      35
+     ],
+     [
+      24489,
+      58,
+      50
+     ]
+    ],
+    "label": "Thin prints at the high: no acceptance"
+   }
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "POC steps up = ",
+     "ACCEPTED",
+     ""
+    ],
+    [
+     "POC stuck behind = ",
+     "FADE",
+     ""
+    ],
+    [
+     "Target the ",
+     "POC",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "Is the move ACCEPTED? Read the POC, not the candle 📊\n\nA breakout candle tells you where price went. The developing POC tells you whether the market agreed. When value migrates with price, and the footprint shows initiative buying through stacked imbalances, the new level is being accepted. When price runs but the POC stays behind and the high prints thin volume, the move is out of value without support, and a rotation back to the POC becomes the higher-probability path.\n\n1️⃣ Check the developing POC every 30 minutes\n2️⃣ POC stepping up + stacked buy imbalances = acceptance, trade with it\n3️⃣ POC stuck behind + thin prints at the high = no acceptance\n4️⃣ In a failed migration, target the POC, not the next high\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #volumeprofile #pointofcontrol #footprint #auctionmarkettheory #marketprofile #daytrading #futurestrading"
+}
