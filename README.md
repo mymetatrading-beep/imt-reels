@@ -13,3 +13,9 @@ Reel di IMT
 - Copertina: `assets/book_cover.jpg` (scaricata dal workflow "Scarica asset" da `assets/urls.txt`)
 - `specs/libro/*.json` → `python3 scripts/make_book_reel.py specs/libro/X.json reels/X.mp4`
 - Reel in italiano (il libro è in italiano), chiusura "LINK IN BIO": il link Amazon sta nella bio di Instagram
+
+## Bot Telegram del canale IMT (`scripts/telegram_bot.py`, workflow "Bot Telegram IMT")
+- Ogni 15 min legge il feed RSS di YouTube @imetatrading (ID UC5FAGTJzGsvW2z8_cWMwn6g) e per ogni video nuovo pubblica sul canale Telegram: titolo, breve sintesi (prime frasi della descrizione, senza link/hashtag) e link con anteprima. Al primo avvio i video già esistenti vengono solo segnati come visti (`telegram/youtube_seen.json`).
+- Shorts inclusi: per escluderli `"include_shorts": false` in `telegram/config.json`.
+- Coda messaggi: `telegram/queue/*.json` → `{"send_at": "...+01:00", "kind": "briefing", "text": "HTML Telegram"}`; inviati quando arriva l'ora, poi spostati in `telegram/sent/`. Il briefing viene limitato a 10 righe. Messaggi più vecchi di 10 ore non vengono inviati.
+- Secret: `TELEGRAM_BOT_TOKEN` (da @BotFather). L'ID del canale viene trovato da solo (il bot deve essere amministratore del canale) e salvato in `telegram/config.json`; in alternativa secret `TELEGRAM_CHAT_ID`.

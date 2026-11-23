@@ -1,0 +1,30 @@
+name: Bot Telegram IMT
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"   # ogni 15 minuti: nuovi video YouTube + messaggi in coda
+  push:
+    branches: [main]
+    paths: ["telegram/queue/**"]    # parte subito quando arriva il briefing
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: telegram-bot
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pubblica su Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/telegram_bot.py
+      - name: Salva lo stato
+        if: always()
+        run: |
+          git config user.name "imt-bot"
+          git config user.email "imt-bot@users.noreply.github.com"
+          git add -A telegram
+          git diff --cached --quiet || (git commit -m "Bot Telegram: stato aggiornato" && git pull --rebase && git push)
