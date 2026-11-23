@@ -14,6 +14,9 @@ Coda: queue/*.json, un file per post:
   "caption": "testo...",
   "channel": "instagram",                 # facoltativo (default instagram)
   "no_youtube": false,                     # true = NON pubblicarlo anche come Short
+  "youtube_at": "2026-11-24T18:00:00+01:00", # facoltativo: orario dello Short su YouTube
+  # (se nella giornata almeno un Reel ha "youtube_at", su YouTube vanno SOLO
+  #  i Reel con "youtube_at", ciascuno al proprio orario; altrimenti regola vecchia)
   # ogni REELS su Instagram parte in automatico anche come YouTube Short
   # (se il canale YouTube e' collegato in Buffer)
   "draft": false                           # true = solo bozza in Buffer (test)
@@ -161,7 +164,12 @@ def youtube_twin(post):
     if not sep:
         body, tags = desc, ""
     desc = body + footer(italian=book, skip_book=book) + (("\n\n#" + tags) if tags else "")
-    return {**post, "channel": "youtube", "yt_title": title, "caption": desc}
+    when = post.get("youtube_at") or post["publish_at"]
+    soon = datetime.now(timezone.utc).replace(microsecond=0) + timedelta(minutes=5)
+    if datetime.fromisoformat(when) < soon:
+        when = soon.isoformat()
+    return {**post, "channel": "youtube", "yt_title": title, "caption": desc,
+            "publish_at": when}
 
 
 BOOK_DAYS = (6, 2)   # domenica e mercoledi': giorni dei reel del libro
@@ -173,14 +181,22 @@ def is_book(post):
 
 def wants_youtube(post):
     """YouTube via Buffer: max 2 Short al giorno.
-    Giorni del libro -> reel del libro + primo reel tecnico; altri giorni -> primi 2."""
+    Se il Reel ha "youtube_at" -> si' (a quell'orario); se un altro Reel dello stesso
+    giorno ha "youtube_at" -> no. Altrimenti (vecchi file) regola precedente:
+    giorni del libro -> reel del libro + primo reel tecnico; altri giorni -> primi 2."""
     if not (post.get("type", "REELS").upper() == "REELS"
             and post.get("channel", "instagram") == "instagram"
             and not post.get("draft") and not post.get("no_youtube")):
         return False
-    if is_book(post):
+    if post.get("youtube_at"):
         return True
     day = datetime.fromisoformat(post["publish_at"])
+    for f in glob.glob("queue/*.json") + glob.glob("scheduled/*.json") + glob.glob("published/*.json"):
+        q = json.load(open(f))
+        if q.get("youtube_at") and datetime.fromisoformat(q["publish_at"]).date() == day.date():
+            return False   # giornata con orari YouTube espliciti: solo i Reel con "youtube_at"
+    if is_book(post):
+        return True
     if day.weekday() not in BOOK_DAYS:
         return True
     tech = []

@@ -1,0 +1,13 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "answer",
+   "kicker": "QUIZ ANSWER",
+   "correct": "B",
+   "answer": "Absorption: sellers hit the bid but couldn't push price lower.",
+   "explain": "Heavy negative delta with no lower low means passive buyers are soaking up the selling. The entry comes when delta flips positive with stacked buy imbalances.",
+   "footer": "Full breakdown in today's 15:30 Reel and the 12:30 carousel."
+  }
+ ]
+}

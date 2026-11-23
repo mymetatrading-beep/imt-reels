@@ -1,0 +1,183 @@
+{
+ "hook": [
+  {
+   "words": [
+    "+3R",
+    "by",
+    "10am."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Feeling",
+    "unbeatable?"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "That's",
+    "the",
+    "DANGER."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Equity: +3R > -1R by lunch",
+  "subtitle": "Same market. Bigger ego...",
+  "yrange": [
+   35,
+   90
+  ],
+  "level": {
+   "value": 80,
+   "label": "+3R PEAK",
+   "label_after": "GIVEN BACK",
+   "right": true
+  },
+  "ohlc": [
+   [
+    50,
+    53,
+    49,
+    52
+   ],
+   [
+    52,
+    58,
+    51,
+    57
+   ],
+   [
+    57,
+    62,
+    56,
+    61
+   ],
+   [
+    61,
+    68,
+    60,
+    67
+   ],
+   [
+    67,
+    72,
+    66,
+    71
+   ],
+   [
+    71,
+    76,
+    70,
+    75
+   ],
+   [
+    75,
+    81,
+    74,
+    80
+   ],
+   [
+    80,
+    82,
+    77,
+    78
+   ],
+   [
+    78,
+    79,
+    72,
+    73
+   ],
+   [
+    73,
+    77,
+    71,
+    76
+   ],
+   [
+    76,
+    77,
+    66,
+    67
+   ],
+   [
+    67,
+    70,
+    64,
+    69
+   ],
+   [
+    69,
+    70,
+    55,
+    56
+   ],
+   [
+    56,
+    58,
+    48,
+    49
+   ],
+   [
+    49,
+    52,
+    44,
+    45
+   ],
+   [
+    45,
+    47,
+    40,
+    41
+   ]
+  ],
+  "marker": {
+   "candle": 7,
+   "y": 88,
+   "label": "ONE MORE TRADE",
+   "label_after": "EUPHORIA",
+   "good": true
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "-4R SWING",
+  "impact_bad": true,
+  "punch": [
+   "The market didn't change. ",
+   "You did."
+  ]
+ },
+ "rules": [
+  [
+   "Set a daily ",
+   "TRADE CAP",
+   ""
+  ],
+  [
+   "Size stays ",
+   "FIXED",
+   " after wins"
+  ],
+  [
+   "Up big? ",
+   "WALK",
+   " away"
+  ]
+ ],
+ "caption": "+3R by 10am. Feeling unbeatable? That's the DANGER. 🧠\n\nThree clean trades and the account is up 3R before 10am. Then the confidence kicks in: one more trade, a slightly bigger size, a setup that's only half there. Four impulsive trades later the day closes at -1R. The market didn't change. The trader's filter did. A big win is when discipline matters most.\n\n1️⃣ Set a maximum number of trades per day before the open\n2️⃣ Keep the same size after a winning streak\n3️⃣ When you hit your daily target, close the platform\n\nFollow @institutionalmetatrading for daily order flow and trading psychology rules.\n\nEducational content. Not financial advice.\n\n#tradingpsychology #overtrading #riskmanagement #tradingdiscipline #daytrading #futurestrading #trader #nasdaq"
+}

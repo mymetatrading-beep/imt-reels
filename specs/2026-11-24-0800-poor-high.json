@@ -1,0 +1,193 @@
+{
+ "hook": [
+  {
+   "words": [
+    "Flat",
+    "high."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "No",
+    "tail."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Price",
+    "RETURNS."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Equal highs > no excess",
+  "subtitle": "Buyers still there at the top...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 85,
+   "label": "POOR HIGH 24,560",
+   "label_after": "REPAIRED",
+   "right": false
+  },
+  "ohlc": [
+   [
+    50,
+    54,
+    49,
+    53
+   ],
+   [
+    53,
+    58,
+    52,
+    57
+   ],
+   [
+    57,
+    62,
+    56,
+    61
+   ],
+   [
+    61,
+    66,
+    60,
+    65
+   ],
+   [
+    65,
+    71,
+    64,
+    70
+   ],
+   [
+    70,
+    76,
+    69,
+    75
+   ],
+   [
+    75,
+    80,
+    74,
+    79
+   ],
+   [
+    79,
+    85,
+    78,
+    83
+   ],
+   [
+    83,
+    85,
+    80,
+    81
+   ],
+   [
+    81,
+    85,
+    79,
+    84
+   ],
+   [
+    84,
+    85,
+    76,
+    77
+   ],
+   [
+    77,
+    78,
+    70,
+    71
+   ],
+   [
+    71,
+    73,
+    66,
+    67
+   ],
+   [
+    67,
+    72,
+    65,
+    71
+   ],
+   [
+    71,
+    77,
+    70,
+    76
+   ],
+   [
+    76,
+    82,
+    75,
+    81
+   ],
+   [
+    81,
+    91,
+    80,
+    89
+   ],
+   [
+    89,
+    92,
+    86,
+    90
+   ]
+  ],
+  "marker": {
+   "candle": 9,
+   "y": 93,
+   "label": "NO EXCESS",
+   "label_after": "UNFINISHED",
+   "good": false
+  },
+  "hit_candle": 16,
+  "spike": true,
+  "thuds": [
+   16
+  ],
+  "impact": "REPAIRED",
+  "impact_bad": false,
+  "punch": [
+   "No tail, no end. ",
+   "Price came back."
+  ]
+ },
+ "rules": [
+  [
+   "No tail at the high = ",
+   "POOR",
+   ""
+  ],
+  [
+   "Don't park stops ",
+   "ABOVE",
+   " it"
+  ],
+  [
+   "Use it as a ",
+   "TARGET",
+   ""
+  ]
+ ],
+ "caption": "Flat high. No tail. Price RETURNS. 📊\n\nNasdaq stalls at 24,560 and prints three equal highs. On the footprint the top tick still shows real volume on both the bid and the ask: no buying tail, no excess, no one-sided rejection. That's a poor high, an auction that ended without finishing. Price rotates 80 points lower, then comes back, runs through 24,560 and takes every stop parked just above it.\n\n1️⃣ Spot it: equal highs with two-sided volume at the top tick and no tail\n2️⃣ Don't treat it as a strong ceiling or hide your stop just above it\n3️⃣ Use it as a target: unfinished auctions tend to get repaired\n\nFollow @institutionalmetatrading for a new order flow rule every day.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #auctionmarkettheory #marketprofile #volumeprofile #daytrading #futurestrading #nasdaq"
+}

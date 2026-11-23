@@ -29,3 +29,8 @@
 - 2026-11-23 15:30 — DOM pulling (offerta da 800 lotti a 24,520 ritirata all'avvicinarsi del prezzo, short intrappolati, breakout): "800 lots offered. Price gets close... They PULL it." (reels/2026-11-23-1530-dom-pulling.mp4) [programmato]
 - 2026-11-23 21:00 — Rischio correlato (long NQ+ES+YM all'1% ciascuno = -3R su una sola idea): "NQ. ES. YM. Three trades? No. ONE bet." (reels/2026-11-23-2100-correlated-risk.mp4) [programmato]
 - 2026-11-23 08:00 — Daily loss limit (stop a -2R, "just one more" porta a -5R): "Down -2R today? Best next trade? NO trade." (reels/2026-11-23-daily-loss-limit.mp4) [Metricool]
+- 2026-11-24 08:00 — Poor high / unfinished auction (3 massimi uguali a 24,560, volume su bid e ask al tick alto, niente excess, ritorno e repair): "Flat high. No tail. Price RETURNS." (reels/2026-11-24-0800-poor-high.mp4) [programmato]
+- 2026-11-24 10:00 STORIA quiz: tocco del FVG con delta -1,200 ma nessun nuovo minimo (risposta 18:00: absorption, aspetta il flip)
+- 2026-11-24 12:30 CAROSELLO: Your FVG is a ZONE. The footprint is the trigger (stacked sell imbalances assorbite nel gap, delta flip con stacked buy imbalances, far edge rotto = invalidato)
+- 2026-11-24 15:30 — FVG + delta at price (tocco a 24,470, -1,200 assorbito, delta flip = entry): "FVG tapped. Buy now? Wait for the FLIP." (reels/2026-11-24-1530-fvg-delta-flip.mp4) [programmato, YouTube Short 18:00]
+- 2026-11-24 21:00 — Psicologia: overtrading dopo una grande vincita (+3R entro le 10, euforia, chiusura a -1R): "+3R by 10am. Feeling unbeatable? That's the DANGER." (reels/2026-11-24-2100-overtrading-after-win.mp4) [programmato, YouTube Short 21:00]

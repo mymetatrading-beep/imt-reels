@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Price taps a bullish FVG. The footprint shows -1,200 delta, but no new low. What's the read?",
+   "options": [
+    "Sellers in control: short it",
+    "Absorption: wait for the flip",
+    "The FVG failed: ignore it"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

@@ -7,6 +7,8 @@ Reel di IMT
 - GitHub Actions ogni 30 min carica in Buffer i prossimi post (max 9 alla volta, limite piano gratuito) → `scheduled/` → `published/`
 - Orari: 08:00, 15:30, 21:00 (Europe/Rome)
 - Ogni Reel esce anche come YouTube Short su @imetatrading (stesso orario, titolo = prima riga della didascalia, categoria Education). YouTube via Buffer accetta max 2 Short al giorno: passano i primi 2 Reel della giornata; la domenica e il mercoledì passano il reel del LIBRO + il primo reel tecnico (08:00). Gli altri restano solo su Instagram. Per escluderne uno: `"no_youtube": true`
+- YouTube Shorts (da 2026-11-24): SOLO 2 Shorts al giorno, alle 18:00 e alle 21:00 (ora di Roma). Nei file di coda dei Reel scelti si mette `"youtube_at": "AAAA-MM-GGTHH:MM:00+01:00"` (orario dello Short, può essere diverso dall'orario Instagram); gli altri Reel del giorno hanno `"no_youtube": true`. `scripts/buffer_sync.py`: se nella giornata almeno un Reel ha `youtube_at`, su YouTube vanno solo i Reel con `youtube_at`, ciascuno al suo orario; i file senza `youtube_at` seguono la regola vecchia (retrocompatibile).
+  - 21:00 = il Reel delle 21:00; 18:00 = il migliore tra i Reel delle 08:00 e 15:30 (preferibilmente order flow); nei giorni del libro lo slot delle 18:00 va al Reel del libro (`youtube_at` alle 18:00 sul file del libro).
 
 ## Reel del LIBRO (2 a settimana, domenica e mercoledì alle 19:00)
 - Libro: "Smart Money Concepts" di Glauco Giovinazzi – https://www.amazon.it/dp/B0C9S5R573

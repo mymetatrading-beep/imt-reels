@@ -1,0 +1,195 @@
+{
+ "hook": [
+  {
+   "words": [
+    "FVG",
+    "tapped."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Buy",
+    "now?"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Wait",
+    "for",
+    "the",
+    "FLIP."
+   ],
+   "y": 1020,
+   "size": 105,
+   "pink": [
+    3
+   ],
+   "underline": 3,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "The gap holds > delta flips",
+  "subtitle": "Sellers hit it. Price won't drop...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 60.5,
+   "label": "FVG 24,470",
+   "label_after": "HELD",
+   "right": true
+  },
+  "ohlc": [
+   [
+    48,
+    51,
+    47,
+    50
+   ],
+   [
+    50,
+    53,
+    49,
+    52
+   ],
+   [
+    52,
+    55,
+    51,
+    54
+   ],
+   [
+    54,
+    57,
+    53,
+    56
+   ],
+   [
+    56,
+    70,
+    55,
+    69
+   ],
+   [
+    69,
+    74,
+    64,
+    73
+   ],
+   [
+    73,
+    77,
+    72,
+    76
+   ],
+   [
+    76,
+    78,
+    73,
+    74
+   ],
+   [
+    74,
+    75,
+    69,
+    70
+   ],
+   [
+    70,
+    71,
+    65,
+    66
+   ],
+   [
+    66,
+    67,
+    61,
+    62
+   ],
+   [
+    62,
+    63,
+    58,
+    61.5
+   ],
+   [
+    61.5,
+    64,
+    60,
+    63.5
+   ],
+   [
+    63.5,
+    72,
+    63,
+    71
+   ],
+   [
+    71,
+    76,
+    70,
+    75
+   ],
+   [
+    75,
+    80,
+    74,
+    79
+   ],
+   [
+    79,
+    84,
+    78,
+    83
+   ],
+   [
+    83,
+    88,
+    82,
+    87
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 50,
+   "label": "DELTA -1,200",
+   "label_after": "ABSORBED",
+   "good": false
+  },
+  "hit_candle": 13,
+  "spike": true,
+  "thuds": [
+   13
+  ],
+  "impact": "DELTA FLIP",
+  "impact_bad": false,
+  "punch": [
+   "The gap was the place. ",
+   "The flip was the entry."
+  ]
+ },
+ "rules": [
+  [
+   "FVG = ",
+   "WHERE",
+   ""
+  ],
+  [
+   "Delta flip = ",
+   "WHEN",
+   ""
+  ],
+  [
+   "No flip, ",
+   "NO",
+   " trade"
+  ]
+ ],
+ "caption": "FVG tapped. Buy now? Wait for the FLIP. 🔍\n\nPrice pulls back into a bullish fair value gap at 24,470. Buying the first touch looks textbook, but the footprint shows sellers hitting the bid hard: delta -1,200 inside the gap. The difference is the result. Price stops making lower lows, the selling gets absorbed, and on the next bar the ask lifts through stacked buy imbalances and delta turns positive. That flip is the entry, not the touch.\n\n1️⃣ The FVG tells you where to look, not when to buy\n2️⃣ Heavy selling with no lower low = absorption, wait for delta to flip\n3️⃣ If the far edge of the gap breaks with delta still negative, no trade\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #smartmoneyconcepts #fairvaluegap #footprint #delta #daytrading #futurestrading #nasdaq"
+}

@@ -1,0 +1,154 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "SMC · ORDER FLOW",
+   "title": [
+    "Your FVG",
+    "is a ZONE.",
+    "The footprint",
+    "is the trigger"
+   ],
+   "pink": [
+    1
+   ],
+   "sub": "No confirmation, no entry."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "An FVG marks imbalance, not intent",
+   "body": "The gap shows where price moved too fast. On the retest you need proof that buyers will defend it again.",
+   "tip": "Location tells you where to look. Order flow tells you when to act."
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "Sellers hit the gap. Watch the result",
+   "body": "Price trades into the FVG and the footprint prints stacked sell imbalances. If price stops falling despite the delta, sellers are being absorbed.",
+   "footprint": {
+    "rows": [
+     [
+      24469,
+      120,
+      95
+     ],
+     [
+      24468,
+      260,
+      80
+     ],
+     [
+      24467,
+      310,
+      70
+     ],
+     [
+      24466,
+      420,
+      90
+     ],
+     [
+      24465,
+      380,
+      60
+     ],
+     [
+      24464,
+      150,
+      20
+     ]
+    ],
+    "sell_imb": [
+     2,
+     3,
+     4
+    ],
+    "poc": 3,
+    "label": "Delta -1,225 · no new low below 24,464"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "The flip: initiative buyers step in",
+   "body": "Next bar: the ask lifts at 3x or more the bid one tick below and delta turns positive. That's the trigger, not the touch.",
+   "footprint": {
+    "rows": [
+     [
+      24474,
+      40,
+      70
+     ],
+     [
+      24473,
+      45,
+      230
+     ],
+     [
+      24472,
+      60,
+      260
+     ],
+     [
+      24471,
+      70,
+      210
+     ],
+     [
+      24470,
+      65,
+      90
+     ],
+     [
+      24469,
+      80,
+      60
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "poc": 2,
+    "label": "230 vs 60 · 260 vs 70 · 210 vs 65 · delta +560"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "No flip? No trade.",
+   "body": "If selling keeps printing and the far edge of the gap breaks with delta still negative, the FVG failed. Step aside.",
+   "tip": "A failed FVG often becomes the liquidity for the next leg down."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "FVG = ",
+     "WHERE",
+     ""
+    ],
+    [
+     "Delta flip = ",
+     "WHEN",
+     ""
+    ],
+    [
+     "Far edge breaks = ",
+     "OUT",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "Your FVG is a ZONE. The footprint is the trigger 🎯\n\nA fair value gap tells you where price moved too fast, not whether buyers will defend it on the retest. The footprint answers that. When sellers hit the gap with stacked sell imbalances and heavy negative delta but price refuses to make a new low, that selling is being absorbed. The entry comes on the next bar, when the ask lifts through stacked buy imbalances and delta flips positive. If the far edge breaks with delta still negative, the gap has failed.\n\n1️⃣ Mark the FVG as a location, not an entry\n2️⃣ Heavy selling + no new low inside the gap = absorption\n3️⃣ Enter on the delta flip with stacked buy imbalances\n4️⃣ Far edge broken with negative delta = setup invalid, step aside\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #smartmoneyconcepts #fairvaluegap #footprint #delta #imbalance #daytrading #futurestrading"
+}
