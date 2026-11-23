@@ -28,3 +28,4 @@
 - 2026-11-23 12:30 CAROSELLO: Is the move ACCEPTED? (POC migration, value area più alte, stacked buy imbalances iniziative, failed migration con prints sottili)
 - 2026-11-23 15:30 — DOM pulling (offerta da 800 lotti a 24,520 ritirata all'avvicinarsi del prezzo, short intrappolati, breakout): "800 lots offered. Price gets close... They PULL it." (reels/2026-11-23-1530-dom-pulling.mp4) [programmato]
 - 2026-11-23 21:00 — Rischio correlato (long NQ+ES+YM all'1% ciascuno = -3R su una sola idea): "NQ. ES. YM. Three trades? No. ONE bet." (reels/2026-11-23-2100-correlated-risk.mp4) [programmato]
+- 2026-11-23 08:00 — Daily loss limit (stop a -2R, "just one more" porta a -5R): "Down -2R today? Best next trade? NO trade." (reels/2026-11-23-daily-loss-limit.mp4) [Metricool]
