@@ -51,12 +51,19 @@ def chat_id(cfg):
     cid = os.environ.get("TELEGRAM_CHAT_ID", "").strip() or cfg.get("chat_id")
     if cid:
         return cid
-    found = {}
-    for u in tg("getUpdates", {"allowed_updates": ["my_chat_member", "channel_post"]}):
-        for key in ("my_chat_member", "channel_post"):
-            chat = (u.get(key) or {}).get("chat") or {}
+    me = tg("getMe")
+    print(f"Bot collegato: @{me.get('username')} ({me.get('first_name')})")
+    found, seen_chats = {}, {}
+    for u in tg("getUpdates", {"allowed_updates": []}):
+        for key, val in u.items():
+            if not isinstance(val, dict):
+                continue
+            chat = val.get("chat") or {}
+            if chat:
+                seen_chats[chat["id"]] = (chat.get("type"), chat.get("title") or chat.get("first_name"))
             if chat.get("type") == "channel":
                 found[chat["id"]] = chat.get("title", "")
+    print("Chat viste dal bot:", seen_chats or "nessuna")
     if not found:
         raise RuntimeError("Non trovo il canale: aggiungi il bot come amministratore del canale "
                            "Telegram IMT e scrivi un messaggio qualsiasi nel canale, poi rilancia.")
