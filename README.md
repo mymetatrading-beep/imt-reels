@@ -16,6 +16,7 @@ Reel di IMT
 
 ## Bot Telegram del canale IMT (`scripts/telegram_bot.py`, workflow "Bot Telegram IMT")
 - Ogni 15 min legge il feed RSS di YouTube @imetatrading (ID UC5FAGTJzGsvW2z8_cWMwn6g) e per ogni video nuovo pubblica sul canale Telegram: titolo, breve sintesi (prime frasi della descrizione, senza link/hashtag) e link con anteprima. Al primo avvio i video già esistenti vengono solo segnati come visti (`telegram/youtube_seen.json`).
-- Shorts inclusi: per escluderli `"include_shorts": false` in `telegram/config.json`.
+- Shorts: su Telegram va SOLO lo Short delle 18:00 (fascia `"shorts_window"` in `telegram/config.json`, ora di Roma); gli altri Shorts vengono saltati, i video lunghi escono sempre. `"include_shorts": false` li esclude tutti.
+- Didascalia dello Short delle 18: `telegram/teasers/AAAA-MM-GG.json` → `{"teaser": "HTML Telegram, in italiano"}` scritto ogni giorno dall'attività "Reel IMT del giorno dopo"; se manca, il bot usa la sintesi della descrizione.
 - Coda messaggi: `telegram/queue/*.json` → `{"send_at": "...+01:00", "kind": "briefing", "text": "HTML Telegram"}`; inviati quando arriva l'ora, poi spostati in `telegram/sent/`. Il briefing viene limitato a 10 righe. Messaggi più vecchi di 10 ore non vengono inviati.
 - Secret: `TELEGRAM_BOT_TOKEN` (da @BotFather). L'ID del canale viene trovato da solo (il bot deve essere amministratore del canale) e salvato in `telegram/config.json`; in alternativa secret `TELEGRAM_CHAT_ID`.

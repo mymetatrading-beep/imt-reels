@@ -1,5 +1,9 @@
 {
   "youtube_channel_id": "UC5FAGTJzGsvW2z8_cWMwn6g",
   "include_shorts": true,
-  "chat_id": -1001894199932
+  "chat_id": -1001894199932,
+  "shorts_window": [
+    "17:45",
+    "19:45"
+  ]
 }

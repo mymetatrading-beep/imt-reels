@@ -17,6 +17,7 @@ Impostazioni in telegram/config.json: include_shorts (true/false).
 import glob, html, json, os, re, shutil, sys, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 CFG_PATH = "telegram/config.json"
@@ -117,6 +118,32 @@ def is_short(vid, link):
         return False
 
 
+ROME = ZoneInfo("Europe/Rome")
+
+
+def rome_time(iso):
+    return datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(ROME)
+
+
+def short_allowed(cfg, published):
+    """Su Telegram va solo lo Short delle 18 (fascia in config "shorts_window")."""
+    if not cfg.get("include_shorts", True):
+        return False
+    win = cfg.get("shorts_window")
+    if not win:
+        return True
+    hm = rome_time(published).strftime("%H:%M")
+    return win[0] <= hm <= win[1]
+
+
+def load_teaser(published):
+    """Didascalia scritta apposta per Telegram: telegram/teasers/AAAA-MM-GG.json {"teaser": "..."}."""
+    path = f"telegram/teasers/{rome_time(published):%Y-%m-%d}.json"
+    if os.path.exists(path):
+        return (json.load(open(path)).get("teaser") or "").strip() or None
+    return None
+
+
 def youtube(cfg, cid):
     url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cfg['youtube_channel_id']}"
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
@@ -140,15 +167,17 @@ def youtube(cfg, cid):
     for v in new:
         short = is_short(v["id"], v["link"])
         seen.append(v["id"])
-        if short and not cfg.get("include_shorts", True):
-            print(f"Short saltato: {v['title']}")
+        if short and not short_allowed(cfg, v["published"]):
+            print(f"Short saltato (fuori dalla fascia delle 18): {v['title']}")
             continue
         watch = f"https://youtu.be/{v['id']}" if not short else f"https://youtube.com/shorts/{v['id']}"
         head = "⚡ <b>Nuovo Short su YouTube</b>" if short else "🎬 <b>Nuovo video su YouTube</b>"
-        s = summary(v["desc"])
-        text = f"{head}\n\n<b>{html.escape(v['title'])}</b>\n"
+        teaser = load_teaser(v["published"]) if short else None
+        s = teaser or html.escape(summary(v["desc"]))
+        title = re.sub(r"\s*#shorts\b", "", v["title"], flags=re.I).strip()
+        text = f"{head}\n\n<b>{html.escape(title)}</b>\n"
         if s:
-            text += f"\n{html.escape(s)}\n"
+            text += f"\n{s}\n"
         text += f"\n▶️ <a href=\"{watch}\">Guardalo qui</a>"
         send(cid, text, preview_url=watch)
         print(f"Pubblicato: {v['title']}")
