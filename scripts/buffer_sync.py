@@ -250,6 +250,12 @@ def add_youtube(f, post, chans):
     target = datetime.fromisoformat(post.get("youtube_at") or post["publish_at"])
     soon = datetime.now(timezone.utc).replace(microsecond=0) + timedelta(minutes=5)
     target = max(target, soon.astimezone(target.tzinfo))
+    if target.weekday() == 6 and target.hour < 20:
+        # domenica: niente Short delle 18 (scelta dell'utente); azzera anche lo slittamento
+        post["no_youtube"] = True
+        json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
+        print(f"YouTube: domenica, niente Short delle 18 per {f} (solo Instagram)")
+        return False
     slot = yt_slot(target, yt_taken(exclude=f))
     if slot is None:
         post["no_youtube"] = True

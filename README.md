@@ -13,6 +13,7 @@ Reel di IMT
 ## Limite YouTube: 2 Shorts in 24 ore MOBILI (dal 24/11/2026)
 - Buffer gratuito blocca il 3° Short pubblicato in un qualunque intervallo di 24 ore (non per giorno di calendario): il 23/11 *DOM pulling* è fallito per questo.
 - `scripts/buffer_sync.py` prima di mandare uno Short controlla gli orari degli Shorts già mandati (`youtube_scheduled_at`) e, se serve, lo sposta di qualche minuto (margine 4 min) finché in ogni finestra di 24 h ce ne sono al massimo 2. Gli orari quindi slittano di ~4 min al giorno (18:04, 18:08…); quando lo spostamento supererebbe 45 min lo Short di quel giorno resta solo su Instagram e gli orari tornano a 18:00/21:00 (circa una volta ogni 12 giorni).
+- DOMENICA: niente Short delle 18 (scelta dell'utente del 24/11/2026), solo quello delle 21:00; nei giorni del libro la domenica lo Short delle 21:00 è il Reel del libro. Questo azzera ogni settimana lo slittamento degli orari (max ~25 min), quindi non si salta più nessun altro Short.
 - Campi: `youtube_scheduled_at` = orario effettivo dello Short; `youtube_failed: true` = Short fallito in Buffer (non conta nel limite).
 - I video lunghi caricati a mano da YouTube Studio NON passano da Buffer e non contano in questo limite.
 
