@@ -148,6 +148,44 @@ def footer(italian, skip_book):
     return "\n\n━━━━━━━━━━━━━━━\n" + "\n".join(rows)
 
 
+YT_WINDOW = timedelta(hours=24)      # Buffer gratuito: max 2 Shorts in 24 ore MOBILI
+YT_MARGIN = timedelta(minutes=4)     # margine per i secondi di ritardo di Buffer
+YT_MAX_SHIFT = timedelta(minutes=45) # oltre questo spostamento lo Short si salta (resta su IG)
+
+
+def yt_time(post):
+    """Orario a cui lo Short e' (o sara') pubblicato su YouTube."""
+    return datetime.fromisoformat(post.get("youtube_scheduled_at") or post.get("youtube_at")
+                                  or post["publish_at"])
+
+
+def yt_taken(exclude=None):
+    """Orari degli Shorts gia' mandati a Buffer (non falliti)."""
+    out = []
+    for f in glob.glob("queue/*.json") + glob.glob("scheduled/*.json") + glob.glob("published/*.json"):
+        if exclude and os.path.basename(f) == os.path.basename(exclude):
+            continue
+        q = json.load(open(f))
+        if q.get("buffer_id_youtube") and not q.get("youtube_failed"):
+            out.append(yt_time(q))
+    return out
+
+
+def yt_slot(target, taken):
+    """Primo orario >= target per cui, contando anche questo Short, in qualunque
+    finestra di 24 ore (+ margine) ci sono al massimo 2 Shorts. None se servirebbe
+    spostarlo di piu' di YT_MAX_SHIFT: in quel caso lo Short si salta e il ritardo
+    accumulato giorno dopo giorno si azzera."""
+    c = target
+    while c - target <= YT_MAX_SHIFT:
+        s = sorted(taken + [c])
+        if all(s[i + 2] - s[i] >= YT_WINDOW + YT_MARGIN
+               for i in range(len(s) - 2) if c in s[i:i + 3]):
+            return c
+        c += timedelta(minutes=1)
+    return None
+
+
 def youtube_twin(post):
     """Stesso Reel adattato a YouTube Shorts (titolo + descrizione)."""
     cap = post.get("caption", "")
@@ -164,12 +202,8 @@ def youtube_twin(post):
     if not sep:
         body, tags = desc, ""
     desc = body + footer(italian=book, skip_book=book) + (("\n\n#" + tags) if tags else "")
-    when = post.get("youtube_at") or post["publish_at"]
-    soon = datetime.now(timezone.utc).replace(microsecond=0) + timedelta(minutes=5)
-    if datetime.fromisoformat(when) < soon:
-        when = soon.isoformat()
     return {**post, "channel": "youtube", "yt_title": title, "caption": desc,
-            "publish_at": when}
+            "publish_at": post["youtube_scheduled_at"]}
 
 
 BOOK_DAYS = (6, 2)   # domenica e mercoledi': giorni dei reel del libro
@@ -213,10 +247,20 @@ def add_youtube(f, post, chans):
     """Carica lo Short gemello; in caso di errore non blocca Instagram."""
     if "youtube" not in chans or post.get("buffer_id_youtube") or not wants_youtube(post):
         return False
+    target = datetime.fromisoformat(post.get("youtube_at") or post["publish_at"])
+    soon = datetime.now(timezone.utc).replace(microsecond=0) + timedelta(minutes=5)
+    target = max(target, soon.astimezone(target.tzinfo))
+    slot = yt_slot(target, yt_taken(exclude=f))
+    if slot is None:
+        post["no_youtube"] = True
+        json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
+        print(f"YouTube: nessun posto entro 24h mobili per {f}, solo Instagram")
+        return False
+    post["youtube_scheduled_at"] = slot.isoformat()
     try:
         post["buffer_id_youtube"] = push(youtube_twin(post), chans)
         json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
-        print(f"OK YouTube {f} -> Buffer {post['buffer_id_youtube']}")
+        print(f"OK YouTube {f} -> Buffer {post['buffer_id_youtube']} alle {slot.isoformat()}")
         return True
     except Exception as e:
         if "maximum number of posts YouTube allows" in str(e):
@@ -226,6 +270,8 @@ def add_youtube(f, post, chans):
             print(f"YouTube: limite 2/giorno raggiunto, {f} solo su Instagram")
         else:
             print(f"ERRORE YouTube {f}: {e}", file=sys.stderr)
+        post.pop("youtube_scheduled_at", None)
+        json.dump(post, open(f, "w"), indent=2, ensure_ascii=False)
         return False
 
 

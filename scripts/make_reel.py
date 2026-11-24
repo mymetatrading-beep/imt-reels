@@ -8,6 +8,9 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 W, H, FPS, DUR = 1080, 1920, 30, 16.5
 SPEC = json.load(open(sys.argv[1]))
+# v2 (default dal 24/11/2026): gancio leggibile dal PRIMO fotogramma, grafico in
+# movimento subito sotto il gancio, durata ~10 s. "version": 1 = vecchio stile 16,5 s.
+V2 = SPEC.get("version", 2) >= 2
 OUT = sys.argv[2] if len(sys.argv) > 2 else "reel.mp4"
 WORK = os.path.dirname(os.path.abspath(OUT))
 FD = "/usr/share/fonts/truetype/google-fonts/"
@@ -79,23 +82,33 @@ def bounce_words(layer, words, t0, t, y, size, colors, gap=0.18):
 
 # ---------- candle scene (from spec) ----------
 CH = SPEC["chart"]
-CH_T0, CH_T1 = 3.6, 9.4
+CH_T0, CH_T1 = (0.0, None) if V2 else (3.6, 9.4)
 OHLC = [tuple(x) for x in CH["ohlc"]]
-C0 = 0.4
-STEP = min(0.25, 4.2 / len(OHLC))
+C0 = None
+STEP = min(0.2, 2.8 / len(OHLC)) if V2 else min(0.25, 4.2 / len(OHLC))
+# v2: le prime 3 candele sono gia' disegnate al fotogramma 0 (niente riquadro vuoto)
+C0 = -2 * STEP if V2 else 0.4
 MARK = CH.get("marker", {}).get("candle")
 REV = CH["hit_candle"]
 SPIKE = CH.get("spike", False)
 HIT = C0 + REV * STEP + 0.17
 YMIN, YMAX = CH["yrange"]
 LEVEL = CH.get("level")
+# tempi delle scene
+if V2:
+    T_RULES = round(CH_T0 + HIT + 2.2, 2)   # impatto + frase finale ben leggibili
+    T_OUTRO = T_RULES + 3.0
+    DUR = T_OUTRO + 1.7
+else:
+    T_RULES, T_OUTRO = 9.5, 14.0
 
 def chart(layer, t):
     d = ImageDraw.Draw(layer)
     lt = t - CH_T0
     box = (90, 560, W - 90, 1380)
     d.rounded_rectangle(box, radius=30, fill=(14, 10, 28, 230), outline=(70, 40, 110), width=3)
-    text_center(d, 430, CH["title"], F(BOLD, 64 if len(CH["title"]) < 24 else 54), WHITE)
+    if not V2:
+        text_center(d, 430, CH["title"], F(BOLD, 64 if len(CH["title"]) < 24 else 54), WHITE)
     text_center(d, 600, CH["subtitle"], F(BOLD, 46), PINK)
     gx0, gx1, gy0, gy1 = 150, W - 150, 690, 1340
     def py(v): return gy1 - (v - YMIN) / (YMAX - YMIN) * (gy1 - gy0)
@@ -174,12 +187,12 @@ def chart(layer, t):
 
 def rules(layer, t):
     d = ImageDraw.Draw(layer)
-    lt = t - 9.5
+    lt = t - T_RULES
     text_center(d, 470, SPEC.get("rules_title", "THE RULE"), F(BOLD, 96), PINK)
     items = [tuple(x) for x in SPEC["rules"]]
     f = F(BOLD, 46); fn = F(BOLD, 60)
     for i, (a, b, c) in enumerate(items):
-        it = (lt - 0.5 - i * 0.9) / 0.4
+        it = ((lt - 0.2 - i * 0.55) / 0.3) if V2 else ((lt - 0.5 - i * 0.9) / 0.4)
         if it <= 0: continue
         off = (1 - ease_out(it)) * 300
         alpha = int(255 * clamp(it))
@@ -198,7 +211,7 @@ def rules(layer, t):
 
 def outro(layer, t):
     d = ImageDraw.Draw(layer)
-    lt = t - 14.0
+    lt = t - T_OUTRO
     p = ease_out_back(lt / 0.4)
     f = F(BOLD, 110)
     im = Image.new("RGBA", (1000, 160), (0, 0, 0, 0))
@@ -206,14 +219,48 @@ def outro(layer, t):
     di.text((500 - di.textlength("FOLLOW", font=f) / 2, 0), "FOLLOW", font=f, fill=PINK)
     sw, sh = max(1, int(1000 * p)), max(1, int(160 * p))
     layer.alpha_composite(im.resize((sw, sh), Image.LANCZOS), (int(W / 2 - sw / 2), int(780 - sh / 2)))
-    if lt > 0.3:
+    if lt > (0.15 if V2 else 0.3):
         text_center(d, 880, SPEC.get("cta", "for tomorrow's rule"), F(BOLD, 64), WHITE)
-    if lt > 0.6:
+    if lt > (0.3 if V2 else 0.6):
         bob = math.sin(lt * 8) * 18
         ax, ay = W / 2, 1080 + bob
         d.line((ax, ay, ax, ay + 150), fill=PINK, width=14)
         d.polygon([(ax - 50, ay + 120), (ax + 50, ay + 120), (ax, ay + 190)], fill=PINK)
     text_center(d, 1700, "Educational content. Not financial advice.", F(REG, 34), GREY)
+
+def hook_static(layer, d, t):
+    """Gancio v2: tutto leggibile dal fotogramma 0, piccolo 'punch' iniziale, parole
+    rosa e sottolineatura gia' presenti. Sta sopra il grafico (y 240-540)."""
+    rows = SPEC["hook"]
+    sizes = []
+    for row in rows:
+        sz = min(row.get("size", 96), 96 if len(rows) < 3 else 74)
+        while sz > 52:
+            ff = F(BOLD, sz)
+            tot = sum(d.textlength(w_, font=ff) for w_ in row["words"]) + sz * 0.28 * (len(row["words"]) - 1)
+            if tot <= W - 110: break
+            sz -= 4
+        sizes.append(sz)
+    total_h = sum(int(sz * 1.3) for sz in sizes)
+    y = 230 + max(0, (300 - total_h) // 2)
+    s = 1 + 0.08 * (1 - ease_out(t / 0.35))          # punch-in iniziale
+    im = Image.new("RGBA", (W, 330), (0, 0, 0, 0)); di = ImageDraw.Draw(im)
+    yy0 = y - 240
+    for row, sz in zip(rows, sizes):
+        ff = F(BOLD, sz); sp = sz * 0.28
+        ws = [di.textlength(w_, font=ff) for w_ in row["words"]]
+        x = (W - sum(ws) - sp * (len(ws) - 1)) / 2
+        for j, (w_, ww) in enumerate(zip(row["words"], ws)):
+            pink = j in row.get("pink", [])
+            di.text((x, yy0), w_, font=ff, fill=PINK if pink else WHITE)
+            if row.get("underline") == j:
+                di.rounded_rectangle((x, yy0 + sz * 1.18, x + ww, yy0 + sz * 1.18 + 12), radius=6, fill=PINK)
+            x += ww + sp
+        yy0 += int(sz * 1.3)
+    if s != 1:
+        im = im.resize((int(W * s), int(330 * s)), Image.LANCZOS)
+    layer.alpha_composite(im, (int(W / 2 - im.width / 2), int(240 + 165 - im.height / 2)))
+
 
 def frame(t):
     img = BG_IMG.copy().convert("RGBA")
@@ -221,7 +268,18 @@ def frame(t):
     d = ImageDraw.Draw(layer)
     header(d, t)
     shake = (0, 0)
-    if t < 3.5:
+    if V2 and t < T_RULES:
+        hook_static(layer, d, t)
+        chart(layer, t)
+        lt = t - CH_T0
+        if HIT < lt < HIT + 0.5:
+            k = (HIT + 0.5 - lt) / 0.5
+            shake = (int(math.sin(lt * 90) * 22 * k), int(math.cos(lt * 70) * 16 * k))
+    elif V2 and t < T_OUTRO:
+        rules(layer, t)
+    elif V2:
+        outro(layer, t)
+    elif t < 3.5:
         t0 = 0.15
         for row in SPEC["hook"]:
             cols = [PINK if j in row.get("pink", []) else WHITE for j in range(len(row["words"]))]
@@ -261,7 +319,7 @@ def frame(t):
         a = int(170 * (1 - (lt - HIT) / 0.3))
         img.alpha_composite(Image.new("RGBA", (W, H), (255, 40, 80, a)))
     # scene fade-in
-    for st in (3.5, 9.5, 14.0):
+    for st in ((T_RULES, T_OUTRO) if V2 else (3.5, 9.5, 14.0)):
         if st <= t < st + 0.2:
             a = int(255 * (1 - (t - st) / 0.2))
             img.alpha_composite(Image.new("RGBA", (W, H), BG + (a,)))
@@ -276,7 +334,7 @@ def music():
     def nf(m): return 440 * 2 ** ((m - 69) / 12)
     chords = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]  # Am F C G
     bass = [45, 41, 36, 43]
-    start = 0.15
+    start = 0.0 if V2 else 0.15
     # pads
     for b in range(int(DUR / bar) + 1):
         ch = chords[b % 4]; t0 = start + b * bar
@@ -344,6 +402,6 @@ for i in range(int(DUR * FPS)):
     p.stdin.write(frame(i / FPS).tobytes())
 p.stdin.close(); p.wait()
 if os.environ.get("PREVIEW"):
-    for ts in (3.2, 9.0, 13.5):
+    for ts in ((0.0, CH_T0 + HIT + 0.3, T_RULES + 2.5, T_OUTRO + 1.0) if V2 else (3.2, 9.0, 13.5)):
         frame(ts).resize((360, 640)).save(OUT.replace(".mp4", f"_p{ts}.png"))
 print("done")

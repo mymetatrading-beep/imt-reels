@@ -10,6 +10,17 @@ Reel di IMT
 - YouTube Shorts (da 2026-11-24): SOLO 2 Shorts al giorno, alle 18:00 e alle 21:00 (ora di Roma). Nei file di coda dei Reel scelti si mette `"youtube_at": "AAAA-MM-GGTHH:MM:00+01:00"` (orario dello Short, può essere diverso dall'orario Instagram); gli altri Reel del giorno hanno `"no_youtube": true`. `scripts/buffer_sync.py`: se nella giornata almeno un Reel ha `youtube_at`, su YouTube vanno solo i Reel con `youtube_at`, ciascuno al suo orario; i file senza `youtube_at` seguono la regola vecchia (retrocompatibile).
   - 21:00 = il Reel delle 21:00; 18:00 = il migliore tra i Reel delle 08:00 e 15:30 (preferibilmente order flow); nei giorni del libro lo slot delle 18:00 va al Reel del libro (`youtube_at` alle 18:00 sul file del libro).
 
+## Limite YouTube: 2 Shorts in 24 ore MOBILI (dal 24/11/2026)
+- Buffer gratuito blocca il 3° Short pubblicato in un qualunque intervallo di 24 ore (non per giorno di calendario): il 23/11 *DOM pulling* è fallito per questo.
+- `scripts/buffer_sync.py` prima di mandare uno Short controlla gli orari degli Shorts già mandati (`youtube_scheduled_at`) e, se serve, lo sposta di qualche minuto (margine 4 min) finché in ogni finestra di 24 h ce ne sono al massimo 2. Gli orari quindi slittano di ~4 min al giorno (18:04, 18:08…); quando lo spostamento supererebbe 45 min lo Short di quel giorno resta solo su Instagram e gli orari tornano a 18:00/21:00 (circa una volta ogni 12 giorni).
+- Campi: `youtube_scheduled_at` = orario effettivo dello Short; `youtube_failed: true` = Short fallito in Buffer (non conta nel limite).
+- I video lunghi caricati a mano da YouTube Studio NON passano da Buffer e non contano in questo limite.
+
+## Stile dei Reel v2 (dal 24/11/2026)
+- `make_reel.py` usa di default lo stile v2: gancio leggibile già dal primo fotogramma (sopra il grafico), grafico in movimento da subito, regola 1-2-3 veloce, durata ~9-10 s. Per il vecchio stile da 16,5 s: `"version": 1` nella spec.
+- Motivo: nella settimana 17-23/11 circa l'81% degli spettatori lasciava il Reel nei primi 3 secondi.
+- Test dei ganci: ogni Reel ha `"hook_type"` (question / number / mistake / contrarian) nella spec e nel file di coda; nei 3 Reel di un giorno si usano 3 tipi diversi. Alla verifica del martedì si confrontano i tipi.
+
 ## Reel del LIBRO (2 a settimana, domenica e mercoledì alle 19:00)
 - Libro: "Smart Money Concepts" di Glauco Giovinazzi – https://www.amazon.it/dp/B0C9S5R573
 - Copertina: `assets/book_cover.jpg` (scaricata dal workflow "Scarica asset" da `assets/urls.txt`)
