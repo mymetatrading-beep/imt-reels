@@ -1,0 +1,193 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "Tight",
+    "stop"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "isn't",
+    "less"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "RISK."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Right idea > wrong stop",
+  "subtitle": "Stop 3 points under entry...",
+  "yrange": [
+   40,
+   92
+  ],
+  "level": {
+   "value": 57,
+   "label": "TIGHT STOP",
+   "label_after": "WICKED OUT",
+   "right": true
+  },
+  "ohlc": [
+   [
+    45,
+    49,
+    44,
+    48
+   ],
+   [
+    48,
+    53,
+    47,
+    52
+   ],
+   [
+    52,
+    57,
+    51,
+    56
+   ],
+   [
+    56,
+    58,
+    53,
+    54
+   ],
+   [
+    54,
+    55,
+    50,
+    51
+   ],
+   [
+    51,
+    53,
+    49,
+    52
+   ],
+   [
+    52,
+    58,
+    51,
+    57
+   ],
+   [
+    57,
+    62,
+    56,
+    61
+   ],
+   [
+    61,
+    63,
+    59,
+    60
+   ],
+   [
+    60,
+    62,
+    58,
+    61
+   ],
+   [
+    61,
+    62,
+    54.5,
+    60.5
+   ],
+   [
+    60.5,
+    66,
+    60,
+    65
+   ],
+   [
+    65,
+    70,
+    64,
+    69
+   ],
+   [
+    69,
+    72,
+    67,
+    71
+   ],
+   [
+    71,
+    77,
+    70,
+    76
+   ],
+   [
+    76,
+    80,
+    75,
+    79
+   ],
+   [
+    79,
+    84,
+    78,
+    83
+   ],
+   [
+    83,
+    88,
+    82,
+    87
+   ]
+  ],
+  "marker": {
+   "candle": 5,
+   "y": 45,
+   "label": "SWING LOW",
+   "label_after": "REAL STOP",
+   "good": true
+  },
+  "hit_candle": 10,
+  "spike": true,
+  "thuds": [
+   10
+  ],
+  "impact": "STOPPED OUT",
+  "impact_bad": true,
+  "punch": [
+   "Right idea. ",
+   "Stop inside the noise."
+  ]
+ },
+ "rules": [
+  [
+   "Stop at ",
+   "INVALIDATION",
+   ""
+  ],
+  [
+   "Size comes ",
+   "FROM",
+   " the stop"
+  ],
+  [
+   "Same $ risk, ",
+   "MORE",
+   " room"
+  ]
+ ],
+ "caption": "Tight stop isn't less RISK. ⚠️\n\nA long at 24,450 with a 3-point stop feels safe: small loss if wrong. But 3 points sat inside normal noise. One wick tagged it, you were out for -1R, and the move you called ran without you. The idea was only wrong below the swing low at 24,438. A stop there with a quarter of the size risks the same money and gives the trade room to breathe.\n\n1️⃣ Put the stop where the idea is invalid, not where the loss feels small\n2️⃣ Calculate size from the stop distance, not the other way round\n3️⃣ Same dollar risk, more room: a wider stop with smaller size\n\nFollow @institutionalmetatrading for daily trading rules on risk and order flow.\n\nEducational content. Not financial advice.\n\n#riskmanagement #stoploss #positionsizing #tradingpsychology #daytrading #futurestrading #smartmoneyconcepts #trading"
+}

@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Equal lows swept. Record volume, delta -2,100, but the bar closes back above. What's the read?",
+   "options": [
+    "Breakdown: short the close",
+    "Climax: watch for the reclaim",
+    "Volume doesn't matter here"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

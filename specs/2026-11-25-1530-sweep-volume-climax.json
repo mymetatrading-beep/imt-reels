@@ -1,0 +1,196 @@
+{
+ "hook_type": "number",
+ "hook": [
+  {
+   "words": [
+    "4,800",
+    "sold"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "at",
+    "the",
+    "low."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Price",
+    "went",
+    "UP."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    2
+   ],
+   "underline": 2,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Sweep > volume climax",
+  "subtitle": "Stops trigger into buyers...",
+  "yrange": [
+   38,
+   88
+  ],
+  "level": {
+   "value": 55,
+   "label": "EQUAL LOWS 24,390",
+   "label_after": "SWEPT",
+   "right": true
+  },
+  "ohlc": [
+   [
+    80,
+    82,
+    76,
+    77
+   ],
+   [
+    77,
+    78,
+    71,
+    72
+   ],
+   [
+    72,
+    73,
+    64,
+    65
+   ],
+   [
+    65,
+    66,
+    55,
+    58
+   ],
+   [
+    58,
+    64,
+    57,
+    63
+   ],
+   [
+    63,
+    66,
+    61,
+    62
+   ],
+   [
+    62,
+    63,
+    58,
+    59
+   ],
+   [
+    59,
+    60,
+    55,
+    57
+   ],
+   [
+    57,
+    62,
+    56,
+    61
+   ],
+   [
+    61,
+    63,
+    59,
+    60
+   ],
+   [
+    60,
+    61,
+    57,
+    58
+   ],
+   [
+    58,
+    59,
+    47,
+    56.5
+   ],
+   [
+    56.5,
+    66,
+    56,
+    65
+   ],
+   [
+    65,
+    70,
+    63,
+    69
+   ],
+   [
+    69,
+    75,
+    68,
+    74
+   ],
+   [
+    74,
+    79,
+    73,
+    78
+   ],
+   [
+    78,
+    84,
+    77,
+    83
+   ],
+   [
+    83,
+    86,
+    80,
+    85
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 44,
+   "label": "4,800 SOLD",
+   "label_after": "ABSORBED",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "STOP RUN",
+  "impact_bad": false,
+  "punch": [
+   "Biggest bar at the low. ",
+   "Last sellers out."
+  ]
+ },
+ "rules": [
+  [
+   "Sweep + record volume = ",
+   "CLIMAX",
+   ""
+  ],
+  [
+   "Close back ",
+   "ABOVE",
+   " the lows"
+  ],
+  [
+   "Enter on the ",
+   "RECLAIM",
+   ""
+  ]
+ ],
+ "caption": "4,800 sold at the low. Price went UP. 📊\n\nEqual lows at 24,390 held a pool of sell stops. The sweep bar was the biggest of the session: 4,800 contracts, stacked sell imbalances and delta -2,100. It looked like a breakdown, but the bar closed back above 24,390. Stops and late breakout sellers hit the bid while passive buyers absorbed every contract. On the next bar the ask lifted through stacked buy imbalances, delta flipped positive and the sellers were trapped below.\n\n1️⃣ Record volume and heavy negative delta at a sweep can be a climax, not a breakdown\n2️⃣ The close decides: back above the lows = selling absorbed\n3️⃣ Enter on the reclaim with positive delta; acceptance below the lows = no long\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #smartmoneyconcepts #liquiditysweep #footprint #delta #volume #daytrading #futurestrading"
+}

@@ -1,0 +1,169 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · SMC",
+   "title": [
+    "The biggest",
+    "bar at the low",
+    "is often",
+    "the END"
+   ],
+   "pink": [
+    3
+   ],
+   "sub": "Volume climax vs real breakdown."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "Equal lows = a pool of sell stops",
+   "body": "Below 24,390 sit the stops of every long and the entries of breakout sellers. When price trades there, those orders turn into market sells.",
+   "tip": "Liquidity is not a level to fear. It's fuel someone needs."
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "Record volume. No follow-through",
+   "body": "The bar trades 4,800 contracts with stacked sell imbalances and delta -2,100, yet it closes back above the lows. Passive buyers took the other side.",
+   "footprint": {
+    "rows": [
+     [
+      24393,
+      220,
+      260
+     ],
+     [
+      24392,
+      340,
+      210
+     ],
+     [
+      24391,
+      520,
+      170
+     ],
+     [
+      24390,
+      760,
+      160
+     ],
+     [
+      24389,
+      820,
+      150
+     ],
+     [
+      24388,
+      480,
+      140
+     ],
+     [
+      24387,
+      230,
+      70
+     ],
+     [
+      24386,
+      80,
+      190
+     ]
+    ],
+    "sell_imb": [
+     3,
+     4,
+     5
+    ],
+    "poc": 4,
+    "label": "Vol 4,800 · delta -2,100 · close above 24,390"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "The reclaim: initiative buyers step in",
+   "body": "Next bar the ask lifts at 3x or more the bid one tick below, three prices in a row, and delta turns positive. That's the entry, not the wick.",
+   "footprint": {
+    "rows": [
+     [
+      24399,
+      60,
+      90
+     ],
+     [
+      24398,
+      70,
+      240
+     ],
+     [
+      24397,
+      75,
+      280
+     ],
+     [
+      24396,
+      80,
+      300
+     ],
+     [
+      24395,
+      90,
+      160
+     ],
+     [
+      24394,
+      110,
+      120
+     ],
+     [
+      24393,
+      130,
+      80
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "poc": 3,
+    "label": "240 vs 75 · 280 vs 80 · 300 vs 90 · delta +655"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Real breakdown? Value builds below",
+   "body": "If volume keeps printing under the lows, delta stays negative and price can't get back above 24,390, the sellers were right. No long.",
+   "tip": "Acceptance below = trend. Rejection back above = climax."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Sweep + record volume = ",
+     "CLIMAX",
+     ""
+    ],
+    [
+     "Close back above = ",
+     "ABSORBED",
+     ""
+    ],
+    [
+     "Enter on the ",
+     "RECLAIM",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "The biggest bar at the low is often the END 🎯\n\nWhen price sweeps equal lows, the stops underneath become market sells, so volume and negative delta explode. That alone doesn't mean sellers are winning. On the sweep bar the footprint printed 4,800 contracts, stacked sell imbalances and delta -2,100, but the bar closed back above 24,390: passive buyers absorbed the selling. The next bar showed initiative buyers lifting the ask at 3x the bid one tick below, three prices in a row. A real breakdown looks different: value builds below the lows and delta stays negative.\n\n1️⃣ Equal lows = sell stops waiting to become market orders\n2️⃣ Record volume + heavy negative delta + close back above = climax and absorption\n3️⃣ Enter on the reclaim with stacked buy imbalances and positive delta\n4️⃣ Acceptance below the lows = breakdown, no long\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #smartmoneyconcepts #liquiditysweep #footprint #delta #imbalance #daytrading #futurestrading"
+}

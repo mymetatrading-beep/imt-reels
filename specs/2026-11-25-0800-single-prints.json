@@ -1,0 +1,193 @@
+{
+ "hook_type": "mistake",
+ "hook": [
+  {
+   "words": [
+    "You're",
+    "buying"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "above",
+    "single"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "PRINTS."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Fast rally > thin profile",
+  "subtitle": "Price left a thin zone behind...",
+  "yrange": [
+   44,
+   90
+  ],
+  "level": {
+   "value": 60,
+   "label": "SINGLE PRINTS 24,505",
+   "label_after": "DEFENDED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    52,
+    55,
+    50,
+    54
+   ],
+   [
+    54,
+    56,
+    51,
+    52
+   ],
+   [
+    52,
+    55,
+    50,
+    53
+   ],
+   [
+    53,
+    56,
+    52,
+    55
+   ],
+   [
+    55,
+    57,
+    53,
+    54
+   ],
+   [
+    54,
+    58,
+    53,
+    57
+   ],
+   [
+    57,
+    66,
+    57,
+    65
+   ],
+   [
+    65,
+    74,
+    65,
+    73
+   ],
+   [
+    73,
+    79,
+    72,
+    78
+   ],
+   [
+    78,
+    81,
+    76,
+    77
+   ],
+   [
+    77,
+    82,
+    76,
+    80
+   ],
+   [
+    80,
+    81,
+    75,
+    76
+   ],
+   [
+    76,
+    77,
+    68,
+    69
+   ],
+   [
+    69,
+    70,
+    62,
+    63
+   ],
+   [
+    63,
+    66,
+    60,
+    65
+   ],
+   [
+    65,
+    72,
+    64,
+    71
+   ],
+   [
+    71,
+    79,
+    70,
+    78
+   ],
+   [
+    78,
+    85,
+    77,
+    84
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 86,
+   "label": "CHASE 24,560",
+   "label_after": "-1.5R HEAT",
+   "good": false
+  },
+  "hit_candle": 14,
+  "spike": true,
+  "thuds": [
+   14
+  ],
+  "impact": "RETESTED",
+  "impact_bad": false,
+  "punch": [
+   "Thin prints get tested. ",
+   "Buy the test."
+  ]
+ },
+ "rules": [
+  [
+   "Fast move = ",
+   "SINGLE PRINTS",
+   ""
+  ],
+  [
+   "Don't chase ",
+   "ABOVE",
+   " them"
+  ],
+  [
+   "Wait for the ",
+   "RETEST",
+   ""
+  ]
+ ],
+ "caption": "You're buying above single PRINTS. 🔍\n\nThe morning rally from 24,450 to 24,560 was so fast that the profile only printed one TPO per price between 24,505 and 24,535. Those single prints mark initiative buying, but also an unfinished area the auction often comes back to test. Buying the top at 24,560 means sitting through that retest with -1.5R of heat. The better trade came when price returned into the single prints, responsive buyers defended 24,505 and the rally resumed.\n\n1️⃣ A fast, one-sided move leaves single prints in the profile\n2️⃣ Don't chase above them: price often returns to test the thin zone\n3️⃣ Enter on the retest only if buyers defend it; if price trades straight through, the initiative is gone\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #marketprofile #singleprints #volumeprofile #auctionmarket #daytrading #futurestrading #nasdaq"
+}
