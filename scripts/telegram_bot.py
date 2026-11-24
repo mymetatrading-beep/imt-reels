@@ -8,13 +8,18 @@ Fa due cose a ogni giro (GitHub Actions ogni 15 min):
 2. Coda: invia i messaggi in telegram/queue/*.json con "send_at" arrivato
    (es. la sintesi del briefing mattutino), poi li sposta in telegram/sent/.
    Formato: {"send_at": "2026-11-24T07:30:00+01:00", "text": "<b>...</b>"}  (HTML Telegram)
+   Con media (facoltativo, percorsi nel repo o URL https):
+     "photo": "posts/x.jpg"   -> foto con il testo come didascalia
+     "video": "reels/x.mp4"   -> video con il testo come didascalia (max 50 MB)
+     "media": ["a.jpg", "b.mp4", ...] -> album (2-10 foto/video), didascalia sul primo
+   Se il testo supera 1024 caratteri, il media esce senza didascalia e subito dopo il testo.
 
 Variabili d'ambiente: TELEGRAM_BOT_TOKEN (secret), TELEGRAM_CHAT_ID (facoltativo).
 Se TELEGRAM_CHAT_ID manca, lo script trova da solo l'ID del canale in cui il bot
 e' amministratore (getUpdates) e lo salva in telegram/config.json.
 Impostazioni in telegram/config.json: include_shorts (true/false).
 """
-import glob, html, json, os, re, shutil, sys, urllib.request, urllib.error
+import glob, html, json, mimetypes, os, re, shutil, sys, uuid, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -38,6 +43,64 @@ def tg(method, payload=None):
             return json.load(r)["result"]
     except urllib.error.HTTPError as e:
         raise RuntimeError(f"Telegram {method}: HTTP {e.code} {e.read().decode()}")
+
+
+def tg_upload(method, fields, files):
+    """Chiamata multipart (invio di file dal repo). files: {nome_campo: percorso}."""
+    b = uuid.uuid4().hex
+    body = bytearray()
+    for k, v in fields.items():
+        body += f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n".encode()
+        body += (v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)).encode() + b"\r\n"
+    for k, path in files.items():
+        ctype = mimetypes.guess_type(path)[0] or "application/octet-stream"
+        body += (f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"; "
+                 f"filename=\"{os.path.basename(path)}\"\r\nContent-Type: {ctype}\r\n\r\n").encode()
+        body += open(path, "rb").read() + b"\r\n"
+    body += f"--{b}--\r\n".encode()
+    req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/{method}", data=bytes(body),
+                                 headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=300) as r:
+            return json.load(r)["result"]
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Telegram {method}: HTTP {e.code} {e.read().decode()}")
+
+
+def _kind(path):
+    return "video" if path.lower().endswith((".mp4", ".mov", ".m4v", ".webm")) else "photo"
+
+
+def send_media(cid, text, photo=None, video=None, media=None):
+    """Foto, video o album con didascalia HTML. I percorsi locali vengono caricati, gli URL passati cosi'."""
+    caption = text if text and len(text) <= 1024 else ""
+    if media:
+        items, files = [], {}
+        for i, m in enumerate(media[:10]):
+            ref = m if m.startswith("http") else f"attach://f{i}"
+            if not m.startswith("http"):
+                files[f"f{i}"] = m
+            it = {"type": _kind(m), "media": ref}
+            if i == 0 and caption:
+                it.update(caption=caption, parse_mode="HTML")
+            items.append(it)
+        if len(items) == 1:
+            return send_media(cid, text, **{items[0]["type"]: media[0]})
+        tg_upload("sendMediaGroup", {"chat_id": str(cid), "media": items}, files)
+    else:
+        kind, path = ("photo", photo) if photo else ("video", video)
+        fields = {"chat_id": str(cid)}
+        if caption:
+            fields.update(caption=caption, parse_mode="HTML")
+        if kind == "video":
+            fields["supports_streaming"] = "true"
+        if path.startswith("http"):
+            fields[kind] = path
+            tg_upload("send" + kind.capitalize(), fields, {})
+        else:
+            tg_upload("send" + kind.capitalize(), fields, {kind: path})
+    if text and not caption:
+        send(cid, text)
 
 
 def load(path, default):
@@ -201,7 +264,11 @@ def queue(cid):
                 body = [l for l in lines if l.strip()]
                 lines = body[:MAX_LINES_BRIEFING - 1] + body[-1:]
                 print("Briefing oltre 10 righe: accorciato.")
-            send(cid, "\n".join(lines))
+            text = "\n".join(lines).strip()
+            if msg.get("photo") or msg.get("video") or msg.get("media"):
+                send_media(cid, text, photo=msg.get("photo"), video=msg.get("video"), media=msg.get("media"))
+            else:
+                send(cid, text)
             print(f"Inviato: {name}")
         shutil.move(path, f"{SENT}/{name}")
 

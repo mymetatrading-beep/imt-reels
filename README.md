@@ -35,3 +35,12 @@ Reel di IMT
 - Didascalia dello Short delle 18: `telegram/teasers/AAAA-MM-GG.json` → `{"teaser": "HTML Telegram, in italiano"}` scritto ogni giorno dall'attività "Reel IMT del giorno dopo"; se manca, il bot usa la sintesi della descrizione.
 - Coda messaggi: `telegram/queue/*.json` → `{"send_at": "...+01:00", "kind": "briefing", "text": "HTML Telegram"}`; inviati quando arriva l'ora, poi spostati in `telegram/sent/`. Il briefing viene limitato a 10 righe. Messaggi più vecchi di 10 ore non vengono inviati.
 - Secret: `TELEGRAM_BOT_TOKEN` (da @BotFather). L'ID del canale viene trovato da solo (il bot deve essere amministratore del canale) e salvato in `telegram/config.json`; in alternativa secret `TELEGRAM_CHAT_ID`.
+
+## Telegram: post con foto, video e album
+Oltre al testo, i file in `telegram/queue/*.json` possono avere:
+- `"photo": "posts/x.jpg"` → foto con il testo come didascalia
+- `"video": "reels/x.mp4"` → video (max 50 MB) con il testo come didascalia
+- `"media": ["a.jpg", "b.mp4", ...]` → album di 2-10 elementi, didascalia sul primo
+
+Percorsi nel repo oppure URL https. Se il testo supera 1024 caratteri il media esce senza didascalia e il testo subito dopo.
+Esempio: `{"send_at": "2026-11-25T12:30:00+01:00", "text": "<b>Titolo</b>\nTesto", "video": "reels/2026-11-25-0800-x.mp4"}`
