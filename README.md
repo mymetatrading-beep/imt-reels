@@ -28,6 +28,7 @@ Reel di IMT
 - Copertina: `assets/book_cover.jpg` (scaricata dal workflow "Scarica asset" da `assets/urls.txt`)
 - `specs/libro/*.json` → `python3 scripts/make_book_reel.py specs/libro/X.json reels/X.mp4`
 - Reel in italiano (il libro è in italiano), chiusura "LINK IN BIO": il link Amazon sta nella bio di Instagram
+- RECENSIONI (dal 24/11/2026, richiesta dell'utente): ogni Reel e ogni storia del libro mostra le recensioni Amazon VERE in `assets/recensioni.json` (scena `scripts/reviews_card.py`, tra i punti chiave e il LINK IN BIO; Reel da 19,5 s). Mai inventare o modificare recensioni: se ne aggiungono altre solo se le fornisce l'utente. Per escluderle da un Reel: `"reviews": false` nella spec.
 
 ## Bot Telegram del canale IMT (`scripts/telegram_bot.py`, workflow "Bot Telegram IMT")
 - Ogni 15 min legge il feed RSS di YouTube @imetatrading (ID UC5FAGTJzGsvW2z8_cWMwn6g) e per ogni video nuovo pubblica sul canale Telegram: titolo, breve sintesi (prime frasi della descrizione, senza link/hashtag) e link con anteprima. Al primo avvio i video già esistenti vengono solo segnati come visti (`telegram/youtube_seen.json`).

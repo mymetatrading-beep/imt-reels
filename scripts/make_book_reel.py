@@ -6,8 +6,10 @@ import json, math, os, subprocess, sys, wave
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-W, H, FPS, DUR = 1080, 1920, 30, 16.5
+W, H, FPS = 1080, 1920, 30
 SPEC = json.load(open(sys.argv[1]))
+REVIEWS = SPEC.get("reviews", True)   # dal 24/11/2026: scena recensioni Amazon vere (assets/recensioni.json)
+DUR = 19.5 if REVIEWS else 16.5
 OUT = sys.argv[2] if len(sys.argv) > 2 else "reel.mp4"
 WORK = os.path.dirname(os.path.abspath(OUT))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,7 +87,11 @@ def paste_cover(img, cov, cx, cy, scale, tilt=0.0):
     img.alpha_composite(c, (int(cx - c.width / 2), int(cy - c.height / 2)))
 
 # ---------- scene ----------
-T_BOOK, T_LIST, T_CTA = 3.5, 8.3, 12.6
+T_BOOK, T_LIST = 3.5, 8.3
+T_REV = 12.0 if REVIEWS else 99
+T_CTA = 15.6 if REVIEWS else 12.6
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from reviews_card import draw_reviews
 
 def scene_hook(layer, d, t):
     t0 = 0.15
@@ -161,10 +167,11 @@ def frame(t):
     header(d)
     if t < T_BOOK: scene_hook(layer, d, t)
     elif t < T_LIST: scene_book(img, d, t)
-    elif t < T_CTA: scene_list(d, t)
+    elif t < min(T_REV, T_CTA): scene_list(d, t)
+    elif t < T_CTA: draw_reviews(layer, t - T_REV, y0=330)
     else: scene_cta(img, d, t)
     img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(18))); img.alpha_composite(layer)
-    for st in (T_BOOK, T_LIST, T_CTA):
+    for st in (T_BOOK, T_LIST, T_REV, T_CTA):
         if st <= t < st + 0.2:
             img.alpha_composite(Image.new("RGBA", (W, H), BG + (int(255 * (1 - (t - st) / 0.2)),)))
     return img.convert("RGB")
@@ -216,7 +223,7 @@ def music():
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((out * 32767).astype(np.int16).tobytes())
 
 if os.environ.get("PREVIEW_ONLY"):
-    for ts in (2.6, 6.0, 11.5, 15.5):
+    for ts in (2.6, 6.0, 11.5, 14.8, DUR - 1):
         frame(ts).resize((360, 640)).save(OUT.replace(".mp4", f"_p{ts}.png"))
     sys.exit()
 music()

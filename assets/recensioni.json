@@ -1,0 +1,9 @@
+{
+ "_nota": "Recensioni VERE del libro 'Smart Money Concepts' su Amazon (acquisti verificati), come riportate sulla landing page MailerLite. Usare solo queste, testo identico; aggiungerne altre solo se fornite dall'utente.",
+ "rating_label": "Recensioni vere da Amazon",
+ "reviews": [
+  {"name": "Giulio", "stars": 5, "text": "Semplicemente il miglior libro sul tema disponibile oggi."},
+  {"name": "Antonio", "stars": 5, "text": "Il miglior manuale di trading che ho letto, non solo ma migliore di molti corsi"},
+  {"name": "Cliente Amazon", "stars": 5, "text": "Libro chiaro e pratico [...] senza teoria astratta e con focus su regole operative e logica di mercato."}
+ ]
+}
