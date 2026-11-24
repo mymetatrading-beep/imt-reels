@@ -392,7 +392,15 @@ def music():
     with wave.open(os.path.join(WORK, "music.wav"), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
 
-music()
+if V2 and SPEC.get("music") != "classic":
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import music_v2
+    style = SPEC.get("music") or music_v2.STYLES[sum(map(ord, os.path.basename(OUT))) % len(music_v2.STYLES)]
+    music_v2.render(os.path.join(WORK, "music.wav"), DUR, CH_T0 + HIT,
+                    [CH_T0 + C0 + i * STEP for i in CH.get("thuds", [])], T_RULES, T_OUTRO,
+                    style=style, seed=sum(map(ord, os.path.basename(OUT))))
+else:
+    music()
 p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                       "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", os.path.join(WORK, "music.wav"),
                       "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
