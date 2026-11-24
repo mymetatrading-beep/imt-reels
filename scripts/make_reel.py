@@ -395,7 +395,7 @@ def music():
 if V2 and SPEC.get("music") != "classic":
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import music_v2
-    style = SPEC.get("music") or music_v2.STYLES[sum(map(ord, os.path.basename(OUT))) % len(music_v2.STYLES)]
+    style = SPEC.get("music") or "dark_trap"   # scelto dall'utente il 24/11/2026
     music_v2.render(os.path.join(WORK, "music.wav"), DUR, CH_T0 + HIT,
                     [CH_T0 + C0 + i * STEP for i in CH.get("thuds", [])], T_RULES, T_OUTRO,
                     style=style, seed=sum(map(ord, os.path.basename(OUT))))

@@ -20,7 +20,7 @@ Reel di IMT
 ## Stile dei Reel v2 (dal 24/11/2026)
 - `make_reel.py` usa di default lo stile v2: gancio leggibile già dal primo fotogramma (sopra il grafico), grafico in movimento da subito, regola 1-2-3 veloce, durata ~9-10 s. Per il vecchio stile da 16,5 s: `"version": 1` nella spec.
 - Motivo: nella settimana 17-23/11 circa l'81% degli spettatori lasciava il Reel nei primi 3 secondi.
-- Musica v2 (`scripts/music_v2.py`, dal 24/11/2026): stereo con riverbero, sidechain sui pad, filtro che si apre nell'intro, riser + mezzo secondo di silenzio prima del colpo, impatto, outro che si chiude. 3 stili: `dark_trap`, `cinematic`, `synthwave`; si sceglie con `"music"` nella spec (se manca, ruota da sola in base al nome del file; `"music": "classic"` = vecchia musica).
+- Musica v2 (`scripts/music_v2.py`, dal 24/11/2026): stereo con riverbero, sidechain sui pad, filtro che si apre nell'intro, riser + mezzo secondo di silenzio prima del colpo, impatto, outro che si chiude. 3 stili: `dark_trap`, `cinematic`, `synthwave`; stile scelto dall'utente: `dark_trap` (default; tonalità diversa per ogni Reel). Altri stili solo con `"music"` nella spec; `"music": "classic"` = vecchia musica.
 - Test dei ganci: ogni Reel ha `"hook_type"` (question / number / mistake / contrarian) nella spec e nel file di coda; nei 3 Reel di un giorno si usano 3 tipi diversi. Alla verifica del martedì si confrontano i tipi.
 
 ## Reel del LIBRO (2 a settimana, domenica e mercoledì alle 19:00)

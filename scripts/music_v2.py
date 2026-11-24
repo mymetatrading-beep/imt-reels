@@ -150,6 +150,9 @@ def render(path, dur, hit, thuds=(), t_rules=None, t_outro=None, style="dark_tra
     style = style if style in PROGS else "dark_trap"
     rng = np.random.default_rng(seed)
     chords, bpm = PROGS[style]
+    # ogni Reel in una tonalita' diversa (stesso stile, meno ripetitivo)
+    tr = (0, -2, -4, 1, 3, -5)[seed % 6]
+    chords = [[m + tr for m in ch] for ch in chords]
     beat = 60 / bpm; bar = beat * 4
     mx = Mix(dur)
     t_rules = t_rules or dur * 0.65; t_outro = t_outro or dur * 0.85
