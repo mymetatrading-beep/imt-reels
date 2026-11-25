@@ -1,0 +1,45 @@
+name: Voce sintetica (TTS)
+on:
+  push:
+    branches: [main]
+    paths: ["tts/*.json"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: tts
+  cancel-in-progress: false
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Genera le voci (edge-tts)
+        run: |
+          pip install -q edge-tts
+          python3 - <<'PY'
+          import json, glob, os, subprocess
+          for spec in sorted(glob.glob("tts/*.json")):
+              name = os.path.splitext(os.path.basename(spec))[0]
+              out = f"tts/out/{name}"
+              if os.path.exists(out + "/done.txt"):
+                  continue
+              s = json.load(open(spec))
+              os.makedirs(out, exist_ok=True)
+              for voice in s.get("voices", [s.get("voice", "en-US-AndrewNeural")]):
+                  vdir = f"{out}/{voice}"
+                  os.makedirs(vdir, exist_ok=True)
+                  for i, line in enumerate(s["lines"]):
+                      subprocess.run(["edge-tts", "--voice", voice, "--rate", s.get("rate", "+0%"),
+                                      "--pitch", s.get("pitch", "+0Hz"), "--text", line,
+                                      "--write-media", f"{vdir}/{i:02d}.mp3"], check=True)
+              open(out + "/done.txt", "w").write("ok\n")
+          PY
+      - name: Salva
+        run: |
+          git config user.name "imt-bot"
+          git config user.email "imt-bot@users.noreply.github.com"
+          git add tts
+          git diff --cached --quiet || (git commit -m "Voci TTS generate" && git pull --rebase && git push)

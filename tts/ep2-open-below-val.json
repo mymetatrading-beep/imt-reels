@@ -1,0 +1,15 @@
+{
+ "voices": ["en-US-AndrewNeural", "en-US-GuyNeural", "en-US-ChristopherNeural"],
+ "rate": "+6%",
+ "lines": [
+  "Price opened below value. Most traders panic. Here's what I watch.",
+  "This is the P.O.C. Where the most volume traded yesterday.",
+  "This line is the V.A.L. The bottom of fair value.",
+  "Now watch price come back to it.",
+  "Big buyer. Right at the V.A.L.",
+  "C.V.D. turns up. Aggressive buyers are stepping in.",
+  "Back inside value, the target is the P.O.C.",
+  "That's not a random bounce. That's the trade.",
+  "Follow for the other two setups."
+ ]
+}
