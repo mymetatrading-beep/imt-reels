@@ -1,0 +1,193 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "A",
+    "new",
+    "high"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "isn't"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "STRENGTH."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Higher high > lower CVD",
+  "subtitle": "Price up. Aggression down...",
+  "yrange": [
+   40,
+   95
+  ],
+  "level": {
+   "value": 80,
+   "label": "PRIOR HIGH 24,580",
+   "label_after": "FAILED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    50,
+    53,
+    49,
+    52
+   ],
+   [
+    52,
+    56,
+    51,
+    55
+   ],
+   [
+    55,
+    60,
+    54,
+    59
+   ],
+   [
+    59,
+    63,
+    57,
+    62
+   ],
+   [
+    62,
+    68,
+    61,
+    67
+   ],
+   [
+    67,
+    72,
+    66,
+    71
+   ],
+   [
+    71,
+    80,
+    70,
+    78
+   ],
+   [
+    78,
+    79,
+    73,
+    74
+   ],
+   [
+    74,
+    76,
+    71,
+    75
+   ],
+   [
+    75,
+    79,
+    74,
+    78
+   ],
+   [
+    78,
+    83,
+    77,
+    79
+   ],
+   [
+    79,
+    85,
+    78,
+    80
+   ],
+   [
+    80,
+    81,
+    72,
+    73
+   ],
+   [
+    73,
+    75,
+    68,
+    69
+   ],
+   [
+    69,
+    71,
+    64,
+    65
+   ],
+   [
+    65,
+    67,
+    60,
+    61
+   ],
+   [
+    61,
+    63,
+    57,
+    58
+   ],
+   [
+    58,
+    60,
+    54,
+    55
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 90,
+   "label": "CVD LOWER HIGH",
+   "label_after": "NO BUYERS",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "DIVERGENCE",
+  "impact_bad": false,
+  "punch": [
+   "Price went up. ",
+   "Buyers didn't."
+  ]
+ },
+ "rules": [
+  [
+   "Higher high + lower CVD = ",
+   "DIVERGENCE",
+   ""
+  ],
+  [
+   "Wait for the ",
+   "BREAK",
+   " of the push"
+  ],
+  [
+   "Stop above the ",
+   "HIGH",
+   ""
+  ]
+ ],
+ "caption": "A new high isn't STRENGTH. 📉\n\nNQ broke the prior high at 24,580 and printed 24,610. On the chart it looked like a trend. Cumulative delta told another story: on the first push it made a high, on the second push it made a LOWER high. Fewer market buyers were lifting the ask, and the last tick traded on thin volume. When the push low broke, nobody was left to defend it and price fell back through 24,580.\n\n1️⃣ Higher high in price + lower high in cumulative delta = divergence, the push is running on fumes\n2️⃣ Divergence is a warning, not an entry: wait for the break of the push low\n3️⃣ Stop above the high that diverged; if delta makes a new high with price, the divergence is cancelled\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #cumulativedelta #delta #footprint #smartmoneyconcepts #daytrading #futurestrading #nasdaq"
+}

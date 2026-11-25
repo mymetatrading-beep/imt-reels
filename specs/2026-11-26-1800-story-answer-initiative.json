@@ -1,0 +1,13 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "answer",
+   "kicker": "QUIZ ANSWER",
+   "correct": "B",
+   "answer": "Initiative buying: the market is building value higher.",
+   "explain": "Aggressive buyers lifting the ask above value, positive delta and a pullback that holds the VAH mean the fade failed. Responsive sellers only win if price closes back inside value with negative delta.",
+   "footer": "Full breakdown in today's 15:30 Reel and the 12:30 carousel."
+  }
+ ]
+}

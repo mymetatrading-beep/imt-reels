@@ -1,0 +1,10 @@
+{
+  "publish_at": "2026-11-26T08:00:00+01:00",
+  "type": "REELS",
+  "media": [
+    "reels/2026-11-26-0800-cvd-divergence.mp4"
+  ],
+  "caption": "A new high isn't STRENGTH. 📉\n\nNQ broke the prior high at 24,580 and printed 24,610. On the chart it looked like a trend. Cumulative delta told another story: on the first push it made a high, on the second push it made a LOWER high. Fewer market buyers were lifting the ask, and the last tick traded on thin volume. When the push low broke, nobody was left to defend it and price fell back through 24,580.\n\n1️⃣ Higher high in price + lower high in cumulative delta = divergence, the push is running on fumes\n2️⃣ Divergence is a warning, not an entry: wait for the break of the push low\n3️⃣ Stop above the high that diverged; if delta makes a new high with price, the divergence is cancelled\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #cumulativedelta #delta #footprint #smartmoneyconcepts #daytrading #futurestrading #nasdaq",
+  "hook_type": "contrarian",
+  "no_youtube": true
+}

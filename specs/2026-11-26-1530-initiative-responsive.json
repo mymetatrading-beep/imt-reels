@@ -1,0 +1,194 @@
+{
+ "hook_type": "question",
+ "hook": [
+  {
+   "words": [
+    "Above",
+    "value."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Fade",
+    "it"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "or",
+    "FOLLOW?"
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Breakout > initiative buyers",
+  "subtitle": "Sellers faded it. Buyers kept lifting...",
+  "yrange": [
+   42,
+   95
+  ],
+  "level": {
+   "value": 60,
+   "label": "VAH 24,520",
+   "label_after": "ACCEPTED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    52,
+    56,
+    50,
+    55
+   ],
+   [
+    55,
+    58,
+    53,
+    54
+   ],
+   [
+    54,
+    57,
+    51,
+    52
+   ],
+   [
+    52,
+    55,
+    49,
+    54
+   ],
+   [
+    54,
+    59,
+    53,
+    58
+   ],
+   [
+    58,
+    60,
+    55,
+    56
+   ],
+   [
+    56,
+    58,
+    52,
+    53
+   ],
+   [
+    53,
+    57,
+    52,
+    56
+   ],
+   [
+    56,
+    60,
+    55,
+    59
+   ],
+   [
+    59,
+    70,
+    58,
+    69
+   ],
+   [
+    69,
+    73,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    61,
+    63
+   ],
+   [
+    63,
+    72,
+    62.5,
+    71
+   ],
+   [
+    71,
+    76,
+    70,
+    75
+   ],
+   [
+    75,
+    79,
+    74,
+    78
+   ],
+   [
+    78,
+    83,
+    77,
+    82
+   ],
+   [
+    82,
+    86,
+    81,
+    85
+   ],
+   [
+    85,
+    89,
+    84,
+    88
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 54,
+   "label": "FADERS SELL",
+   "label_after": "RUN OVER",
+   "good": false
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "INITIATIVE",
+  "impact_bad": false,
+  "punch": [
+   "Sellers faded value. ",
+   "Buyers took over."
+  ]
+ },
+ "rules": [
+  [
+   "Stacked buys above value = ",
+   "INITIATIVE",
+   ""
+  ],
+  [
+   "Holds above VAH? ",
+   "FOLLOW",
+   ""
+  ],
+  [
+   "Back inside value? ",
+   "FADE",
+   ""
+  ]
+ ],
+ "caption": "Above value. Fade it or FOLLOW? 🤔\n\nYesterday's value area high on NQ was 24,520. Price broke above it and responsive sellers did what they always do: they sold it, expecting a return to value. The footprint said otherwise. Buyers lifted the ask with stacked buy imbalances, delta stayed positive and the pullback held 24,520 instead of falling back inside. That's initiative activity: the market is building new value higher, and the faders become fuel.\n\n1️⃣ Responsive = trading back toward value. Initiative = trading away from it, with aggression\n2️⃣ Stacked buy imbalances above the VAH + pullback that holds = follow the break\n3️⃣ Price back inside value with negative delta = the responsive sellers were right, fade it\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #valuearea #marketprofile #footprint #delta #daytrading #futurestrading #smartmoneyconcepts"
+}
