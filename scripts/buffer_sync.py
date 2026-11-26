@@ -149,8 +149,9 @@ def footer(italian, skip_book):
 
 
 YT_WINDOW = timedelta(hours=24)      # Buffer gratuito: max 2 Shorts in 24 ore MOBILI
-YT_MARGIN = timedelta(minutes=4)     # margine per i secondi di ritardo di Buffer
-YT_MAX_SHIFT = timedelta(minutes=45) # oltre questo spostamento lo Short si salta (resta su IG)
+YT_MARGIN = timedelta(minutes=15)    # margine: Buffer registra lo Short a fine caricamento,
+                                     # qualche minuto dopo l'orario (26/11: 4 min non bastavano)
+YT_MAX_SHIFT = timedelta(hours=3)   # oltre questo spostamento lo Short si salta (resta su IG)
 
 
 def yt_time(post):

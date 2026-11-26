@@ -9,5 +9,7 @@
   "youtube_at": "2026-11-26T18:00:00+01:00",
   "buffer_id": "6b06d5e6a98b4d223dadf296",
   "youtube_scheduled_at": "2026-11-26T18:08:00+01:00",
-  "buffer_id_youtube": "6b06d5e637cb3e4c567a4f62"
+  "buffer_id_youtube": "6b06d5e637cb3e4c567a4f62",
+  "youtube_failed": true,
+  "youtube_error": "Buffer 26/11 18:08: daily posting limit reached"
 }
