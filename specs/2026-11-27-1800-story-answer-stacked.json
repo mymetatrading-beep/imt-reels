@@ -1,0 +1,13 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "answer",
+   "kicker": "QUIZ ANSWER",
+   "correct": "B",
+   "answer": "Zone defended: the same buyers are back.",
+   "explain": "Stacked buy imbalances mark where aggressive buyers committed size. On the retest they defend it: sellers hit the bid but can't trade through, and delta flips. A close through the zone with sell imbalances would invalidate it.",
+   "footer": "Full breakdown in today's 08:00 Reel."
+  }
+ ]
+}

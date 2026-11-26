@@ -1,0 +1,193 @@
+{
+ "hook_type": "number",
+ "hook": [
+  {
+   "words": [
+    "4",
+    "stacked"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "buys."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Now",
+    "SUPPORT."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Stacked buys > retest",
+  "subtitle": "Price returns to the imbalances...",
+  "yrange": [
+   40,
+   92
+  ],
+  "level": {
+   "value": 58,
+   "label": "STACKED BUYS 24,440",
+   "label_after": "HELD",
+   "right": true
+  },
+  "ohlc": [
+   [
+    50,
+    53,
+    48,
+    52
+   ],
+   [
+    52,
+    54,
+    49,
+    50
+   ],
+   [
+    50,
+    52,
+    47,
+    51
+   ],
+   [
+    51,
+    55,
+    50,
+    54
+   ],
+   [
+    54,
+    56,
+    52,
+    53
+   ],
+   [
+    53,
+    66,
+    52,
+    65
+   ],
+   [
+    65,
+    72,
+    64,
+    71
+   ],
+   [
+    71,
+    75,
+    69,
+    73
+   ],
+   [
+    73,
+    74,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    59,
+    60
+   ],
+   [
+    60,
+    61,
+    58.3,
+    60.5
+   ],
+   [
+    60.5,
+    68,
+    60,
+    67
+   ],
+   [
+    67,
+    73,
+    66,
+    72
+   ],
+   [
+    72,
+    78,
+    71,
+    77
+   ],
+   [
+    77,
+    82,
+    76,
+    81
+   ],
+   [
+    81,
+    86,
+    80,
+    85
+   ],
+   [
+    85,
+    89,
+    84,
+    88
+   ]
+  ],
+  "marker": {
+   "candle": 11,
+   "y": 50,
+   "label": "RETEST",
+   "label_after": "SELLERS FAIL",
+   "good": true
+  },
+  "hit_candle": 12,
+  "spike": true,
+  "thuds": [
+   12
+  ],
+  "impact": "DEFENDED",
+  "impact_bad": false,
+  "punch": [
+   "They stacked here once. ",
+   "They defend it again."
+  ]
+ },
+ "rules": [
+  [
+   "Stacked buys = a ",
+   "ZONE",
+   ""
+  ],
+  [
+   "Retest holds? ",
+   "BUY",
+   " it"
+  ],
+  [
+   "Close through it? ",
+   "INVALID",
+   ""
+  ]
+ ],
+ "caption": "4 stacked buys. Now SUPPORT. 📊\n\nNQ broke out with 4 buy imbalances in a row from 24,438 to 24,441: at each price the ask traded at least 3x the bid one tick below. That's where aggressive buyers committed size. When price pulls back to that zone, those same buyers defend their average: sellers hit the bid, but price can't trade through, delta turns positive and the low holds. A close through the zone with sell imbalances means the buyers are gone.\n\n1️⃣ Stacked buy imbalances = mark the zone, it's where initiative buyers entered\n2️⃣ Retest holds + delta turns positive = look for the long\n3️⃣ Close through the zone with sell imbalances = the zone is invalid\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #imbalance #stackedimbalances #delta #daytrading #futurestrading #smartmoneyconcepts"
+}

@@ -1,0 +1,194 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "Order",
+    "blocks"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "don't",
+    "hold."
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "BUYERS",
+    "do."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Order block > delta at price",
+  "subtitle": "Sellers hit the zone. No break...",
+  "yrange": [
+   38,
+   90
+  ],
+  "level": {
+   "value": 54,
+   "label": "ORDER BLOCK 24,400",
+   "label_after": "DEFENDED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    56,
+    58,
+    52,
+    53
+   ],
+   [
+    53,
+    54,
+    50,
+    51
+   ],
+   [
+    51,
+    62,
+    50.5,
+    61
+   ],
+   [
+    61,
+    68,
+    60,
+    67
+   ],
+   [
+    67,
+    72,
+    66,
+    71
+   ],
+   [
+    71,
+    73,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    63,
+    64
+   ],
+   [
+    64,
+    65,
+    60,
+    61
+   ],
+   [
+    61,
+    62,
+    57,
+    58
+   ],
+   [
+    58,
+    59,
+    54,
+    55
+   ],
+   [
+    55,
+    56,
+    51,
+    53
+   ],
+   [
+    53,
+    61,
+    52.5,
+    60
+   ],
+   [
+    60,
+    66,
+    59,
+    65
+   ],
+   [
+    65,
+    71,
+    64,
+    70
+   ],
+   [
+    70,
+    75,
+    69,
+    74
+   ],
+   [
+    74,
+    80,
+    73,
+    79
+   ],
+   [
+    79,
+    84,
+    78,
+    83
+   ],
+   [
+    83,
+    87,
+    82,
+    86
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 45,
+   "label": "DELTA -1,205",
+   "label_after": "ABSORBED",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "BUYERS IN",
+  "impact_bad": false,
+  "punch": [
+   "The zone was the place. ",
+   "Buyers were the reason."
+  ]
+ },
+ "rules": [
+  [
+   "Order block = ",
+   "WHERE",
+   ""
+  ],
+  [
+   "Absorption + delta flip = ",
+   "WHEN",
+   ""
+  ],
+  [
+   "Close below the OB? ",
+   "OUT",
+   ""
+  ]
+ ],
+ "caption": "Order blocks don't hold. BUYERS do. 🎯\n\nThe bullish order block on NQ sat at 24,396-24,404, the last down candle before the impulse. Price came back and sellers hit the bid hard inside it: 1,390 contracts at three prices in a row, delta -1,205 on the bar. Yet the low barely moved. Passive buyers were absorbing. The next bar flipped: stacked buy imbalances and delta +700, and the rally started. The order block told you where to look. The footprint told you someone was actually defending it.\n\n1️⃣ Order block = a location, not a signal\n2️⃣ Heavy selling absorbed + delta flip with stacked buys = the trigger\n3️⃣ Sell imbalances and a close below the order block = nobody is defending it, stay out\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderblock #smartmoneyconcepts #smc #orderflow #footprint #delta #daytrading #futurestrading"
+}

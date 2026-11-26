@@ -1,0 +1,163 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · SMC",
+   "title": [
+    "Order blocks",
+    "don't hold.",
+    "BUYERS do."
+   ],
+   "pink": [
+    2
+   ],
+   "sub": "Delta at price inside the order block."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "The OB is only a location",
+   "body": "Bullish OB on NQ: the last down candle before the impulse, 24,396-24,404. It shows where buyers stepped in before. Not whether they are there today.",
+   "tip": "Location first. Confirmation second."
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "Selling absorbed in the zone",
+   "body": "Price taps the OB and sellers hit the bid 3x or more the ask one tick above, three prices in a row. Yet the low barely moves: passive buyers absorb it all.",
+   "footprint": {
+    "rows": [
+     [
+      24404,
+      120,
+      90
+     ],
+     [
+      24403,
+      180,
+      70
+     ],
+     [
+      24402,
+      420,
+      95
+     ],
+     [
+      24401,
+      460,
+      110
+     ],
+     [
+      24400,
+      510,
+      140
+     ],
+     [
+      24399,
+      60,
+      45
+     ],
+     [
+      24398,
+      20,
+      15
+     ]
+    ],
+    "sell_imb": [
+     2,
+     3,
+     4
+    ],
+    "poc": 4,
+    "label": "1,390 sold · delta -1,205 · low holds"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "The delta flip",
+   "body": "Next bar: buyers lift the ask 3x or more the bid one tick below, three prices in a row. Delta goes from -1,205 to +700. Now the zone has a witness.",
+   "footprint": {
+    "rows": [
+     [
+      24410,
+      60,
+      110
+     ],
+     [
+      24409,
+      70,
+      260
+     ],
+     [
+      24408,
+      80,
+      290
+     ],
+     [
+      24407,
+      85,
+      300
+     ],
+     [
+      24406,
+      95,
+      150
+     ],
+     [
+      24405,
+      120,
+      130
+     ],
+     [
+      24404,
+      110,
+      80
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "poc": 3,
+    "label": "260 vs 80 · 290 vs 85 · 300 vs 95 · delta +700"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "When the OB fails",
+   "body": "Sell imbalances keep printing, delta stays negative and price closes under 24,396. Nobody defended the zone. That's not an entry, it's your invalidation.",
+   "tip": "Close below the OB = it's gone."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Order block = ",
+     "WHERE",
+     ""
+    ],
+    [
+     "Absorption + delta flip = ",
+     "WHEN",
+     ""
+    ],
+    [
+     "Close below the OB = ",
+     "OUT",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "Order blocks don't hold. BUYERS do. 🎯\n\nAn order block is a location: the last opposite candle before an impulse, where institutions stepped in before. It doesn't tell you whether anyone is still there today. The footprint does. Inside a bullish order block you want to see selling that gets absorbed: heavy prints on the bid, stacked sell imbalances, but no new low. Then the flip: buyers lift the ask with stacked buy imbalances and delta turns positive. If sell imbalances keep printing and price closes below the zone, it's not support anymore.\n\n1️⃣ Order block = where to look, never the entry on its own\n2️⃣ Heavy selling with no new low = passive buyers absorbing\n3️⃣ Stacked buy imbalances + delta flip = the trigger\n4️⃣ Close below the order block with negative delta = invalidation\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderblock #smartmoneyconcepts #smc #orderflow #footprint #imbalance #delta #daytrading"
+}

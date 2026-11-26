@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Retest of 4 stacked buy imbalances. Low holds, delta turns positive. The read?",
+   "options": [
+    "Breakdown: sell it",
+    "Defended: buyers are back",
+    "No signal yet"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}
