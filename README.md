@@ -23,6 +23,11 @@ Reel di IMT
 - Musica v2 (`scripts/music_v2.py`, dal 24/11/2026): stereo con riverbero, sidechain sui pad, filtro che si apre nell'intro, riser + mezzo secondo di silenzio prima del colpo, impatto, outro che si chiude. 3 stili: `dark_trap`, `cinematic`, `synthwave`; stile scelto dall'utente: `dark_trap` (default; tonalità diversa per ogni Reel). Altri stili solo con `"music"` nella spec; `"music": "classic"` = vecchia musica.
 - Test dei ganci: ogni Reel ha `"hook_type"` (question / number / mistake / contrarian) nella spec e nel file di coda; nei 3 Reel di un giorno si usano 3 tipi diversi. Alla verifica del martedì si confrontano i tipi.
 
+## Slot già occupati e gancio contrarian (dal 27/11/2026)
+- Prima di creare i Reel del giorno dopo controlla queue/, scheduled/ e published/: se per uno slot (08:00, 15:30, 21:00) esiste già un Reel (es. creato a mano in chat), NON crearne un altro per quello slot e non toccare i suoi campi youtube_at / no_youtube; se esiste già telegram/teasers/<data>.json non sovrascriverlo. Carosello e storie si creano comunque.
+- Il gancio "contrarian" nella forma "[convinzione comune] isn't [verità] ⚠️" è quello che rende di più ("Tight stop isn't less RISK." = 111,8% di visualizzazione media): ogni giorno almeno 1 Reel usa questo formato, gli altri continuano il test degli altri ganci.
+- Già creati in chat il 27/11: 29/11 08:00, 15:30, 21:00 e 30/11 08:00 (con Short YouTube del 30/11 alle 18:00 e teaser Telegram).
+
 ## Reel del LIBRO (2 a settimana, domenica e mercoledì alle 19:00)
 - Libro: "Smart Money Concepts" di Glauco Giovinazzi – https://www.amazon.it/dp/B0C9S5R573
 - Copertina: `assets/book_cover.jpg` (scaricata dal workflow "Scarica asset" da `assets/urls.txt`)
