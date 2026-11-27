@@ -1,0 +1,170 @@
+{
+ "format": "carousel",
+ "slides": [
+  {
+   "kind": "cover",
+   "kicker": "ORDER FLOW · LIQUIDITY",
+   "title": [
+    "Tested 3 times?",
+    "It's not strong.",
+    "It's TIRED."
+   ],
+   "pink": [
+    2
+   ],
+   "sub": "Why every retest weakens a level."
+  },
+  {
+   "kind": "point",
+   "num": 1,
+   "title": "The myth",
+   "body": "\"The more a level is tested, the stronger it is.\" On the footprint it's often the opposite: every test uses up the passive buy orders resting there.",
+   "tip": "A level is only as strong as the bids on it."
+  },
+  {
+   "kind": "point",
+   "num": 2,
+   "title": "Test 1: thick bids",
+   "body": "NQ support at 24,400. 1,150 contracts hit the bid at the low and price holds. Buyers lift the ask 3x or more the bid one tick below: 3 stacked buys, 30-point bounce.",
+   "footprint": {
+    "rows": [
+     [
+      24406,
+      60,
+      150
+     ],
+     [
+      24405,
+      70,
+      240
+     ],
+     [
+      24404,
+      80,
+      260
+     ],
+     [
+      24403,
+      85,
+      280
+     ],
+     [
+      24402,
+      90,
+      140
+     ],
+     [
+      24401,
+      260,
+      120
+     ],
+     [
+      24400,
+      1150,
+      90
+     ]
+    ],
+    "buy_imb": [
+     1,
+     2,
+     3
+    ],
+    "poc": 6,
+    "label": "1,150 on the bid · 3 stacked buys · +30 pts"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 3,
+   "title": "Test 3: the bids are gone",
+   "body": "Same level, only 200 on the bid. Sellers hit the bid 3x or more the ask one tick above, below 24,400. No bounce: the orders that held it are used up.",
+   "footprint": {
+    "rows": [
+     [
+      24402,
+      110,
+      95
+     ],
+     [
+      24401,
+      150,
+      80
+     ],
+     [
+      24400,
+      200,
+      70
+     ],
+     [
+      24399,
+      330,
+      60
+     ],
+     [
+      24398,
+      310,
+      55
+     ],
+     [
+      24397,
+      290,
+      40
+     ],
+     [
+      24396,
+      60,
+      30
+     ]
+    ],
+    "sell_imb": [
+     3,
+     4,
+     5
+    ],
+    "poc": 3,
+    "label": "200 on the bid · 3 stacked sells · no bounce"
+   }
+  },
+  {
+   "kind": "point",
+   "num": 4,
+   "title": "Measure the bounce",
+   "body": "Test 1: +30 points. Test 2: +12. Test 3: +2. Shrinking bounces and weaker delta at the same price tell you buyers are getting tired.",
+   "tip": "30 > 12 > 2 = the level is running out."
+  },
+  {
+   "kind": "point",
+   "num": 5,
+   "title": "When a retest DOES hold",
+   "body": "Bid volume grows again on the retest, the low holds and delta flips positive with stacked buys. That's new buyers stepping in, not the old ones running out.",
+   "tip": "Bigger bids + delta flip = still defended."
+  },
+  {
+   "kind": "rule",
+   "title": "THE RULE",
+   "items": [
+    [
+     "Shrinking bounces = ",
+     "TIRED",
+     ""
+    ],
+    [
+     "Sell imbalances below = ",
+     "BREAK",
+     ""
+    ],
+    [
+     "Bigger bids + flip = ",
+     "HOLD",
+     ""
+    ]
+   ]
+  },
+  {
+   "kind": "cta",
+   "title": "FOLLOW",
+   "sub": "Daily order flow and SMC rules, explained on the footprint."
+  }
+ ],
+ "caption": "Tested 3 times? It's not strong. It's TIRED. 📊\n\nEvery time price comes back to a support, someone has to buy there. Those passive buy orders get filled and they don't come back for free. On the footprint you can see it: the bid volume at the level shrinks test after test, the bounces get smaller and delta weakens. When the 3rd test prints sell imbalances below the level, the liquidity is gone and the level breaks. The exception: a retest where bid volume grows again and delta flips positive means new buyers stepped in.\n\n1️⃣ Count the tests and measure each bounce: 30 > 12 > 2 points is a warning\n2️⃣ Shrinking bid volume at the level = passive buyers being used up\n3️⃣ Stacked sell imbalances under the level = the break is starting\n4️⃣ Bigger bids + delta flip on a retest = fresh buyers, the level can still hold\n\nSave this for your next session and follow @institutionalmetatrading for daily order flow.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #supportandresistance #liquidity #delta #imbalance #daytrading #smartmoneyconcepts"
+}

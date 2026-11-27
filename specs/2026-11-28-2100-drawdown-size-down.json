@@ -1,0 +1,180 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "Losing"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "streak?"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "Size",
+    "DOWN."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    1
+   ],
+   "underline": 1,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Account equity > drawdown",
+  "subtitle": "Down -5R. Then size x2...",
+  "yrange": [
+   28,
+   84
+  ],
+  "level": {
+   "value": 50,
+   "label": "DRAWDOWN -5R",
+   "label_after": "NOW -9R",
+   "right": true
+  },
+  "ohlc": [
+   [
+    78,
+    80,
+    76,
+    79
+   ],
+   [
+    79,
+    80,
+    74,
+    75
+   ],
+   [
+    75,
+    77,
+    72,
+    76
+   ],
+   [
+    76,
+    77,
+    70,
+    71
+   ],
+   [
+    71,
+    73,
+    67,
+    68
+   ],
+   [
+    68,
+    70,
+    64,
+    65
+   ],
+   [
+    65,
+    67,
+    62,
+    66
+   ],
+   [
+    66,
+    67,
+    59,
+    60
+   ],
+   [
+    60,
+    61,
+    55,
+    56
+   ],
+   [
+    56,
+    57,
+    50.5,
+    51.5
+   ],
+   [
+    51.5,
+    54,
+    50.2,
+    53
+   ],
+   [
+    53,
+    53.5,
+    42,
+    43
+   ],
+   [
+    43,
+    45,
+    40,
+    44
+   ],
+   [
+    44,
+    44.5,
+    34,
+    35
+   ],
+   [
+    35,
+    38,
+    33,
+    37
+   ],
+   [
+    37,
+    38,
+    32,
+    33
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 44,
+   "label": "SIZE x2",
+   "label_after": "DOUBLE LOSS",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "-9R",
+  "impact_bad": true,
+  "punch": [
+   "Same losses. ",
+   "Twice the damage."
+  ]
+ },
+ "rules": [
+  [
+   "After -5R: ",
+   "HALF",
+   " size"
+  ],
+  [
+   "Full size after ",
+   "+3R",
+   ""
+  ],
+  [
+   "Never size up to ",
+   "RECOVER",
+   ""
+  ]
+ ],
+ "caption": "Losing streak? Size DOWN, not up. 🧠\n\nMost traders in a drawdown do the opposite: down -5R in a week, they double the size to win it back faster. Two more normal losses at double risk and the account is at -9R instead of -7R. The strategy didn't change, only the damage did. Losing streaks are part of any edge. Cutting size during a drawdown keeps you in the game long enough for the edge to show up again.\n\n1️⃣ After -5R from the peak, cut risk per trade in half\n2️⃣ Go back to full size only after you recover +3R at half size\n3️⃣ Never size up to recover a loss\n\nFollow @institutionalmetatrading for daily trading rules on risk, psychology and order flow.\n\nEducational content. Not financial advice.\n\n#riskmanagement #positionsizing #drawdown #tradingpsychology #tradingdiscipline #daytrading #futurestrading #trading"
+}

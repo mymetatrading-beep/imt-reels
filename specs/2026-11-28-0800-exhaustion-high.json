@@ -1,0 +1,193 @@
+{
+ "hook_type": "mistake",
+ "hook": [
+  {
+   "words": [
+    "You",
+    "buy"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "when",
+    "buyers"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "QUIT."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Rally > exhaustion top",
+  "subtitle": "Ask volume dries up at the high...",
+  "yrange": [
+   44,
+   88
+  ],
+  "level": {
+   "value": 80,
+   "label": "HIGH 24,580",
+   "label_after": "EXHAUSTED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    50,
+    53,
+    48,
+    52
+   ],
+   [
+    52,
+    56,
+    51,
+    55
+   ],
+   [
+    55,
+    59,
+    54,
+    58
+   ],
+   [
+    58,
+    62,
+    57,
+    61
+   ],
+   [
+    61,
+    66,
+    60,
+    65
+   ],
+   [
+    65,
+    70,
+    64,
+    69
+   ],
+   [
+    69,
+    73,
+    68,
+    72
+   ],
+   [
+    72,
+    76,
+    71,
+    75
+   ],
+   [
+    75,
+    78,
+    74,
+    77
+   ],
+   [
+    77,
+    79,
+    76,
+    78.5
+   ],
+   [
+    78.5,
+    80,
+    77.5,
+    79
+   ],
+   [
+    79,
+    79.5,
+    74,
+    74.5
+   ],
+   [
+    74.5,
+    75,
+    69,
+    70
+   ],
+   [
+    70,
+    72,
+    66,
+    67
+   ],
+   [
+    67,
+    69,
+    64,
+    68
+   ],
+   [
+    68,
+    69,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    58,
+    59
+   ],
+   [
+    59,
+    61,
+    56,
+    57
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 59,
+   "label": "LONG AT HIGH",
+   "label_after": "TRAPPED",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "EXHAUSTION",
+  "impact_bad": true,
+  "punch": [
+   "No buyers left. ",
+   "Nothing to push it up."
+  ]
+ },
+ "rules": [
+  [
+   "Shrinking ask = ",
+   "NO FUEL",
+   ""
+  ],
+  [
+   "Don't ",
+   "BUY",
+   " the dry-up"
+  ],
+  [
+   "Wait for the ",
+   "SELL",
+   " imbalance"
+  ]
+ ],
+ "caption": "You buy when buyers QUIT. 📉\n\nNQ grinds up into 24,580. On the footprint, the last four ticks of the high traded 520, 210, 60 and then just 4 contracts on the ask. Delta on the bar is still positive, so it looks strong, but aggressive buyers are disappearing tick by tick. That's exhaustion: not a big seller stepping in (that would be absorption, with heavy volume), but simply nobody left willing to pay a higher price. Late longs buy the top, the first sell imbalance prints and price rotates back down to 24,520.\n\n1️⃣ Read the ask volume at the high: shrinking prints tick after tick = no fuel left\n2️⃣ Don't buy a high where the ask dries up, even if delta is still green\n3️⃣ The first sell imbalance below the high is the confirmation, not the dry-up alone\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #exhaustion #delta #volumeprofile #daytrading #futurestrading #smartmoneyconcepts"
+}

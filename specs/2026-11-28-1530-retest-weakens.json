@@ -1,0 +1,180 @@
+{
+ "hook_type": "number",
+ "hook": [
+  {
+   "words": [
+    "3rd",
+    "test."
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "Support"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "BREAKS."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "3 tests > 3 weaker bounces",
+  "subtitle": "Bids at 24,400 shrink every time...",
+  "yrange": [
+   34,
+   80
+  ],
+  "level": {
+   "value": 55,
+   "label": "SUPPORT 24,400",
+   "label_after": "BROKEN",
+   "right": true
+  },
+  "ohlc": [
+   [
+    72,
+    75,
+    70,
+    71
+   ],
+   [
+    71,
+    72,
+    64,
+    65
+   ],
+   [
+    65,
+    66,
+    58,
+    59
+   ],
+   [
+    59,
+    60,
+    55.2,
+    58
+   ],
+   [
+    58,
+    68,
+    57,
+    67
+   ],
+   [
+    67,
+    70,
+    65,
+    66
+   ],
+   [
+    66,
+    67,
+    60,
+    61
+   ],
+   [
+    61,
+    62,
+    55.3,
+    57
+   ],
+   [
+    57,
+    63,
+    56,
+    62
+   ],
+   [
+    62,
+    63,
+    58,
+    59
+   ],
+   [
+    59,
+    60,
+    55.4,
+    56
+   ],
+   [
+    56,
+    57,
+    47,
+    48
+   ],
+   [
+    48,
+    50,
+    44,
+    45
+   ],
+   [
+    45,
+    47,
+    42,
+    46
+   ],
+   [
+    46,
+    47,
+    40,
+    41
+   ],
+   [
+    41,
+    43,
+    38,
+    39
+   ]
+  ],
+  "marker": {
+   "candle": 10,
+   "y": 70,
+   "label": "3RD TEST",
+   "label_after": "NO BIDS",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "NO BUYERS",
+  "impact_bad": true,
+  "punch": [
+   "Every test ate the bids. ",
+   "The 3rd found none."
+  ]
+ },
+ "rules": [
+  [
+   "Measure every ",
+   "BOUNCE",
+   ""
+  ],
+  [
+   "Weaker delta = ",
+   "FEWER",
+   " buyers"
+  ],
+  [
+   "3rd weak test? ",
+   "DON'T",
+   " buy"
+  ]
+ ],
+ "caption": "3rd test. Support BREAKS. 📊\n\n\"The more a level is tested, the stronger it is\" is one of the most expensive myths in trading. NQ support at 24,400: on the 1st test 1,150 contracts traded on the bid, stacked buy imbalances printed and price bounced 30 points. On the 2nd test only 620 on the bid, delta barely positive, a 12-point bounce. On the 3rd test just 200 on the bid, no bounce, stacked sell imbalances below. Every test consumes the passive buy orders resting at the level. When they're gone, the level breaks.\n\n1️⃣ Measure every bounce and the bid volume on every test\n2️⃣ Smaller bounces + weaker delta = buyers being used up\n3️⃣ Don't buy the 3rd weak test: wait for a real reclaim or trade the break\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#orderflow #footprint #supportandresistance #delta #liquidity #daytrading #futurestrading #smartmoneyconcepts"
+}

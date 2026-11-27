@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "Support at 24,400 tested 3 times. Bounces: 30, 12, then 2 points. Bid volume shrinks each time. The read?",
+   "options": [
+    "Strong level: buy it",
+    "Buyers used up: break risk",
+    "No information here"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}
