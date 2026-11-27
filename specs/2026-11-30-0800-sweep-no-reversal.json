@@ -1,0 +1,181 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "A",
+    "sweep"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "isn't",
+    "a"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "REVERSAL."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Sweep of equal lows > no reclaim",
+  "subtitle": "Stops taken at 24,390. Delta still red...",
+  "yrange": [
+   26,
+   80
+  ],
+  "level": {
+   "value": 50,
+   "label": "EQUAL LOWS 24,390",
+   "label_after": "NO RECLAIM",
+   "right": true
+  },
+  "ohlc": [
+   [
+    70,
+    72,
+    67,
+    68
+   ],
+   [
+    68,
+    69,
+    61,
+    62
+   ],
+   [
+    62,
+    64,
+    50.2,
+    52
+   ],
+   [
+    52,
+    60,
+    51,
+    59
+   ],
+   [
+    59,
+    63,
+    57,
+    58
+   ],
+   [
+    58,
+    59,
+    50.1,
+    51
+   ],
+   [
+    51,
+    57,
+    50.5,
+    56
+   ],
+   [
+    56,
+    58,
+    53,
+    54
+   ],
+   [
+    54,
+    55,
+    46,
+    47
+   ],
+   [
+    47,
+    49.6,
+    46.5,
+    48.5
+   ],
+   [
+    48.5,
+    49.8,
+    47,
+    48
+   ],
+   [
+    48,
+    48.5,
+    40,
+    41
+   ],
+   [
+    41,
+    43,
+    38,
+    39
+   ],
+   [
+    39,
+    40,
+    34,
+    35
+   ],
+   [
+    35,
+    38,
+    33,
+    37
+   ],
+   [
+    37,
+    38,
+    31,
+    32
+   ]
+  ],
+  "marker": {
+   "candle": 9,
+   "y": 68,
+   "label": "LONG THE SWEEP",
+   "label_after": "DELTA -1,900",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "NO FLIP",
+  "impact_bad": true,
+  "punch": [
+   "Delta never flipped. ",
+   "Sellers still in control."
+  ]
+ },
+ "rules": [
+  [
+   "Sweep = ",
+   "LOCATION",
+   ", not entry"
+  ],
+  [
+   "Wait for a close ",
+   "ABOVE",
+   ""
+  ],
+  [
+   "No delta ",
+   "FLIP",
+   "? No trade"
+  ]
+ ],
+ "caption": "A sweep isn't a REVERSAL. ⚠️\n\nEqual lows at 24,390 get swept, the stops are taken and everyone goes long. But the candle closes BELOW the lows, the bounce can't reclaim them and delta stays at -1,900: sellers are still pressing. A sweep only tells you where to look. The footprint tells you if buyers actually showed up.\n\n1️⃣ A sweep is a location, not an entry\n2️⃣ Wait for a close back above the swept lows\n3️⃣ No delta flip, no stacked buy imbalances = no trade\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#liquiditysweep #orderflow #footprint #delta #smartmoneyconcepts #daytrading #futurestrading #tradingtips"
+}

@@ -1,0 +1,180 @@
+{
+ "hook_type": "contrarian",
+ "hook": [
+  {
+   "words": [
+    "Low",
+    "volume"
+   ],
+   "y": 620,
+   "size": 120
+  },
+  {
+   "words": [
+    "isn't"
+   ],
+   "y": 790,
+   "size": 120
+  },
+  {
+   "words": [
+    "WEAK."
+   ],
+   "y": 1020,
+   "size": 120,
+   "pink": [
+    0
+   ],
+   "underline": 0,
+   "gap": 0.24
+  }
+ ],
+ "chart": {
+  "title": "Low volume node > fast rejection",
+  "subtitle": "Price fell through 24,480 in minutes...",
+  "yrange": [
+   32,
+   82
+  ],
+  "level": {
+   "value": 60,
+   "label": "LVN 24,480",
+   "label_after": "REJECTED",
+   "right": true
+  },
+  "ohlc": [
+   [
+    72,
+    74,
+    70,
+    73
+   ],
+   [
+    73,
+    75,
+    71,
+    72
+   ],
+   [
+    72,
+    73,
+    70,
+    71
+   ],
+   [
+    71,
+    72,
+    62,
+    63
+   ],
+   [
+    63,
+    64,
+    52,
+    53
+   ],
+   [
+    53,
+    55,
+    47,
+    48
+   ],
+   [
+    48,
+    50,
+    45,
+    49
+   ],
+   [
+    49,
+    54,
+    48,
+    53
+   ],
+   [
+    53,
+    57,
+    52,
+    56
+   ],
+   [
+    56,
+    60.5,
+    55,
+    59
+   ],
+   [
+    59,
+    60.8,
+    57,
+    58
+   ],
+   [
+    58,
+    59,
+    49,
+    50
+   ],
+   [
+    50,
+    51,
+    44,
+    45
+   ],
+   [
+    45,
+    47,
+    42,
+    46
+   ],
+   [
+    46,
+    47,
+    39,
+    40
+   ],
+   [
+    40,
+    42,
+    37,
+    38
+   ]
+  ],
+  "marker": {
+   "candle": 9,
+   "y": 68,
+   "label": "BUY THE GAP",
+   "label_after": "TRAPPED",
+   "good": false
+  },
+  "hit_candle": 11,
+  "spike": true,
+  "thuds": [
+   11
+  ],
+  "impact": "REJECTED",
+  "impact_bad": true,
+  "punch": [
+   "Thin volume = fast rejection. ",
+   "It rejects again."
+  ]
+ },
+ "rules": [
+  [
+   "Mark the ",
+   "LVN",
+   " on the profile"
+  ],
+  [
+   "Expect ",
+   "FAST",
+   " rejection there"
+  ],
+  [
+   "Confirm with ",
+   "DELTA",
+   ""
+  ]
+ ],
+ "caption": "Low volume isn't WEAK. ⚠️\n\nA low volume node on the profile is where price moved so fast that almost nobody traded: one side was in total control. When price comes back to that thin zone, it usually gets rejected just as fast. Buying \"because there's nothing there\" means buying right into the sellers' zone.\n\n1️⃣ Mark the low volume nodes on your volume profile\n2️⃣ Expect fast rejection there, not easy acceptance\n3️⃣ Confirm with delta: aggressive sellers at the LVN = rejection\n\nFollow @institutionalmetatrading for daily order flow and SMC rules.\n\nEducational content. Not financial advice.\n\n#volumeprofile #orderflow #lvn #footprint #daytrading #futurestrading #smartmoneyconcepts #tradingtips"
+}
