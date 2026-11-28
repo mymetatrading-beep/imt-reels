@@ -1,0 +1,16 @@
+{
+ "format": "story",
+ "slides": [
+  {
+   "kind": "quiz",
+   "kicker": "ORDER FLOW QUIZ",
+   "question": "NQ fell through 24,480 in minutes. Now it's back there: 3 stacked sell imbalances, delta -645, no hold above. The read?",
+   "options": [
+    "Thin zone: easy break up",
+    "LVN rejection: sellers defend",
+    "Absorption: go long"
+   ],
+   "footer": "Answer drops later today. Pick yours now."
+  }
+ ]
+}

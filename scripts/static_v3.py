@@ -239,7 +239,9 @@ def render(slide, W, H, page, total, seed=0):
             for l in el:
                 ctext(d, W, yy, l, fe, G.TEXT); yy += elh
         if slide.get("footer"):
-            ff, fl_ = text_block(d, slide["footer"], "bold", 42, W - 250, 3, 30)
+            ff, fl_ = text_block(d, slide["footer"], "bold", 42, W - 250, 1, 36)
+            if len(fl_) > 1:
+                ff, fl_ = text_block(d, slide["footer"], "bold", 42, W - 250, 3, 30)
             flh = int(ff.size * 1.35)
             fh = flh * len(fl_) + 54
             yb = bottom - fh
