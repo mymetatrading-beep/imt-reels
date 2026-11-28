@@ -12,6 +12,8 @@ Fa due cose a ogni giro (GitHub Actions ogni 15 min):
      "photo": "posts/x.jpg"   -> foto con il testo come didascalia
      "video": "reels/x.mp4"   -> video con il testo come didascalia (max 50 MB)
      "media": ["a.jpg", "b.mp4", ...] -> album (2-10 foto/video), didascalia sul primo
+   Extra: "set_chat_photo": "posts/logo.png" -> cambia la foto del canale;
+          "pin": true -> fissa in alto il messaggio appena inviato.
    Se il testo supera 1024 caratteri, il media esce senza didascalia e subito dopo il testo.
 
 Variabili d'ambiente: TELEGRAM_BOT_TOKEN (secret), TELEGRAM_CHAT_ID (facoltativo).
@@ -86,7 +88,8 @@ def send_media(cid, text, photo=None, video=None, media=None):
             items.append(it)
         if len(items) == 1:
             return send_media(cid, text, **{items[0]["type"]: media[0]})
-        tg_upload("sendMediaGroup", {"chat_id": str(cid), "media": items}, files)
+        res = tg_upload("sendMediaGroup", {"chat_id": str(cid), "media": items}, files)
+        res = res[0] if isinstance(res, list) and res else res
     else:
         kind, path = ("photo", photo) if photo else ("video", video)
         fields = {"chat_id": str(cid)}
@@ -96,11 +99,12 @@ def send_media(cid, text, photo=None, video=None, media=None):
             fields["supports_streaming"] = "true"
         if path.startswith("http"):
             fields[kind] = path
-            tg_upload("send" + kind.capitalize(), fields, {})
+            res = tg_upload("send" + kind.capitalize(), fields, {})
         else:
-            tg_upload("send" + kind.capitalize(), fields, {kind: path})
+            res = tg_upload("send" + kind.capitalize(), fields, {kind: path})
     if text and not caption:
         send(cid, text)
+    return res
 
 
 def load(path, default):
@@ -142,7 +146,7 @@ def send(cid, text, preview_url=None):
     p = {"chat_id": cid, "text": text, "parse_mode": "HTML"}
     p["link_preview_options"] = ({"url": preview_url, "prefer_large_media": True}
                                  if preview_url else {"is_disabled": True})
-    tg("sendMessage", p)
+    return tg("sendMessage", p)
 
 
 # ---------------------------------------------------------------- YouTube
@@ -267,16 +271,24 @@ def queue(cid):
         if now - when > timedelta(hours=10):
             print(f"Scaduto, non inviato: {name}")
         else:
-            lines = [l for l in msg["text"].strip().splitlines()]
+            lines = [l for l in msg.get("text", "").strip().splitlines()]
             if msg.get("kind") == "briefing" and len([l for l in lines if l.strip()]) > MAX_LINES_BRIEFING:
                 body = [l for l in lines if l.strip()]
                 lines = body[:MAX_LINES_BRIEFING - 1] + body[-1:]
                 print("Briefing oltre 10 righe: accorciato.")
             text = "\n".join(lines).strip()
+            if msg.get("set_chat_photo"):
+                # cambia la foto del canale (il bot deve essere admin con "modifica info canale")
+                tg_upload("setChatPhoto", {"chat_id": str(cid)}, {"photo": msg["set_chat_photo"]})
+                print("Foto del canale aggiornata.")
+            res = None
             if msg.get("photo") or msg.get("video") or msg.get("media"):
-                send_media(cid, text, photo=msg.get("photo"), video=msg.get("video"), media=msg.get("media"))
-            else:
-                send(cid, text)
+                res = send_media(cid, text, photo=msg.get("photo"), video=msg.get("video"), media=msg.get("media"))
+            elif text:
+                res = send(cid, text)
+            if msg.get("pin") and res and res.get("message_id"):
+                tg("pinChatMessage", {"chat_id": cid, "message_id": res["message_id"], "disable_notification": True})
+                print("Messaggio fissato in alto.")
             print(f"Inviato: {name}")
         shutil.move(path, f"{SENT}/{name}")
 
