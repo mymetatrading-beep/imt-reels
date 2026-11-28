@@ -17,6 +17,18 @@ Reel di IMT
 - Campi: `youtube_scheduled_at` = orario effettivo dello Short; `youtube_failed: true` = Short fallito in Buffer (non conta nel limite).
 - I video lunghi caricati a mano da YouTube Studio NON passano da Buffer e non contano in questo limite.
 
+## Stile v3 Liquid Glass (default dal 28/11/2026)
+- Deciso da Glauco il 28/11/2026: Reel/Shorts, caroselli e storie usano lo stile IMT Liquid Glass con i colori e il logo ORIGINALI di IMT. Default `"version": 3` in `make_reel.py` e `make_static.py`; `"version": 2` = stile v2 (Poppins, bordi magenta), `"version": 1` = vecchio Reel da 16,5 s. Formati, durate, campi delle spec e musica invariati.
+- Codice: `scripts/imt_glass.py` (palette, font, fondo con bagliori, lastre di vetro, sfere, pillole, logo vettoriale, candele cilindriche), `scripts/reel_v3.py` (scene dei Reel), `scripts/static_v3.py` (caroselli e storie).
+- Colori: rosa #FF66C4 (chiaro #FFB8E2, scuro #A8287A), bianco #FFFFFF / argento #E4EAF2 > #8C96A6, fondo #05070D, testo secondario #9AA6B8, oro #FFC24B solo per POC e livelli chiave (linea del livello e pillola dell'etichetta prima dell'impatto). Niente azzurro, arancione, verde o rosso.
+- Fondo: bagliore rosa rgba(255,102,196,0.22) in alto a sinistra, freddo rgba(170,180,230,0.10) in basso a destra.
+- Lastre di vetro: bianco ~6%, angoli 22-30 px, filo di luce sul bordo alto, riflesso diagonale, ombra morbida. Pillole per etichette (rosa = buy/accento, argento = sell/neutro, oro = livello chiave). Numeri e lettere in sfere rosa con riflesso in alto a sinistra.
+- Candele: rialziste bianco-argento, ribassiste rosa, angoli arrotondati e gradiente laterale chiaro > pieno > scuro (effetto cilindro). Bolle opzionali nel grafico: `"bubbles": [{"candle": 8, "y": 61, "r": 26, "buy": true}]` (sfera rosa = buy, argento = sell).
+- Logo: marchio originale IMT in vettoriale (box 472x470: anello rosa centro (236,230) r 218/168 aperto in basso tra x 132-340 per y > 300, barre rosa ai lati, barra centrale bianca piu' alta), vetro con gradiente diagonale, riflesso, bordo chiaro, alone rosa e ombra. Header: pillola di vetro con logo + "IMT · SMC ORDER FLOW" in Montserrat SemiBold spaziato, puntino rosa. Mai una sfera con scritto IMT.
+- Font: Montserrat per il marchio, Inter per i testi, DejaVu Sans Mono per prezzi e footprint (JetBrains Mono non installato). Niente emoji nelle grafiche.
+- Reel: gancio leggibile dal fotogramma 0 sopra la lastra del grafico (parola chiave rosa sottolineata), grafico in movimento da subito, riflesso che scorre sulla lastra nei primi secondi, impatto in una lastra di vetro, regole in lastre che entrano con scala + dissolvenza, finale con logo e FOLLOW.
+- Footprint (caroselli): ask in pillola rosa = buy imbalance, bid in pillola argento = sell imbalance, POC con contorno oro.
+
 ## Stile dei Reel v2 (dal 24/11/2026)
 - `make_reel.py` usa di default lo stile v2: gancio leggibile già dal primo fotogramma (sopra il grafico), grafico in movimento da subito, regola 1-2-3 veloce, durata ~9-10 s. Per il vecchio stile da 16,5 s: `"version": 1` nella spec.
 - Motivo: nella settimana 17-23/11 circa l'81% degli spettatori lasciava il Reel nei primi 3 secondi.

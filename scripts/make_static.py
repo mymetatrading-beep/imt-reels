@@ -20,7 +20,9 @@ footprint: {"rows": [[prezzo, bid, ask], ...] dall'alto in basso,
             "buy_imb": [indici righe con ask in evidenza],
             "sell_imb": [indici righe con bid in evidenza],
             "poc": indice, "label": "testo sotto"}
-Solo caratteri presenti in Poppins (niente emoji / frecce speciali).
+Solo caratteri presenti nei font (niente emoji / frecce speciali).
+Stile: v3 IMT Liquid Glass (default dal 28/11/2026, scripts/static_v3.py);
+"version": 2 nella spec = stile precedente (Poppins, bordi magenta).
 """
 import json, os, sys, textwrap
 import numpy as np
@@ -233,9 +235,14 @@ def main():
     name = os.path.splitext(os.path.basename(sys.argv[1]))[0]
     W, H = (1080, 1350) if spec["format"] == "carousel" else (1080, 1920)
     n = len(spec["slides"]); paths = []
+    rend = render
+    if spec.get("version", 3) >= 3:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import static_v3
+        rend = static_v3.render
     for i, s in enumerate(spec["slides"]):
         p = os.path.join(out, f"{name}-{i + 1:02d}.jpg")
-        render(s, W, H, i + 1, n if spec["format"] == "carousel" else 0, i).save(p, quality=92)
+        rend(s, W, H, i + 1, n if spec["format"] == "carousel" else 0, i).save(p, quality=92)
         paths.append(p)
     print("\n".join(paths))
 

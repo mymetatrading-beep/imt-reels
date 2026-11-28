@@ -10,7 +10,11 @@ W, H, FPS, DUR = 1080, 1920, 30, 16.5
 SPEC = json.load(open(sys.argv[1]))
 # v2 (default dal 24/11/2026): gancio leggibile dal PRIMO fotogramma, grafico in
 # movimento subito sotto il gancio, durata ~10 s. "version": 1 = vecchio stile 16,5 s.
-V2 = SPEC.get("version", 2) >= 2
+# v3 (default dal 28/11/2026): stile IMT Liquid Glass rosa/bianco con logo originale
+# (scripts/imt_glass.py). "version": 2 = stile v2, "version": 1 = vecchio stile.
+VER = SPEC.get("version", 3)
+V2 = VER >= 2
+V3 = VER >= 3
 OUT = sys.argv[2] if len(sys.argv) > 2 else "reel.mp4"
 WORK = os.path.dirname(os.path.abspath(OUT))
 FD = "/usr/share/fonts/truetype/google-fonts/"
@@ -324,6 +328,11 @@ def frame(t):
             a = int(255 * (1 - (t - st) / 0.2))
             img.alpha_composite(Image.new("RGBA", (W, H), BG + (a,)))
     return img.convert("RGB")
+
+if V3:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from reel_v3 import install
+    frame = install(globals())
 
 # ---------- music ----------
 SR = 44100
