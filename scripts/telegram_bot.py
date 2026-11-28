@@ -19,7 +19,7 @@ Se TELEGRAM_CHAT_ID manca, lo script trova da solo l'ID del canale in cui il bot
 e' amministratore (getUpdates) e lo salva in telegram/config.json.
 Impostazioni in telegram/config.json: include_shorts (true/false).
 """
-import glob, html, json, mimetypes, os, re, shutil, sys, uuid, urllib.request, urllib.error
+import glob, html, json, mimetypes, os, re, shutil, sys, time, uuid, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -209,8 +209,16 @@ def load_teaser(published):
 
 def youtube(cfg, cid):
     url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cfg['youtube_channel_id']}"
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
-        root = ET.fromstring(r.read())
+    for attempt in range(4):               # il feed YouTube a volte risponde 5xx per qualche secondo
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
+                root = ET.fromstring(r.read())
+            break
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == 3:
+                raise
+            print(f"Feed YouTube: HTTP {e.code}, nuovo tentativo tra {20 * (attempt + 1)}s")
+            time.sleep(20 * (attempt + 1))
     entries = []
     for e in root.findall("a:entry", NS):
         g = e.find("media:group", NS)
